@@ -252,7 +252,7 @@
       <guard xmi:type="uml:LiteralBoolean" xmi:id="_by3oAYTEEe6L8-zQAw4yUA" name="Администратор вводит ID билета_To__guard" value="true"/>
       <weight xmi:type="uml:LiteralInteger" xmi:id="_by3oAoTEEe6L8-zQAw4yUA" name="Администратор вводит ID билета_To__weight"/>
     </edge>
-    <edge xmi:type="uml:ControlFlow" xmi:id="_lcB6oITEEe6L8-zQAw4yUA" target="_eky9EITEEe6L8-zQAw4yUA" source="_0FD2AITDEe6L8-zQAw4yUA">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_lcB6oITEEe6L8-zQAw4yUA" name="Билета нет в системе" target="_eky9EITEEe6L8-zQAw4yUA" source="_0FD2AITDEe6L8-zQAw4yUA">
       <guard xmi:type="uml:LiteralBoolean" xmi:id="_lcB6oYTEEe6L8-zQAw4yUA" name="_To__guard" value="true"/>
       <weight xmi:type="uml:LiteralInteger" xmi:id="_lcChsITEEe6L8-zQAw4yUA" name="_To__weight"/>
     </edge>
@@ -309,5 +309,81 @@
     </node>
     <node xmi:type="uml:MergeNode" xmi:id="_AsyWEITFEe6L8-zQAw4yUA" name="" incoming="_DduzsITFEe6L8-zQAw4yUA _D8z8YITFEe6L8-zQAw4yUA _Ea4_gITFEe6L8-zQAw4yUA" outgoing="_bCuIAITFEe6L8-zQAw4yUA"/>
     <node xmi:type="uml:ActivityFinalNode" xmi:id="_TSiJMITFEe6L8-zQAw4yUA" name="" incoming="_W0sBUITFEe6L8-zQAw4yUA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_FIL20IUnEe6hDKKFIp5ekw" name="Model" node="_Ie2QoIUnEe6hDKKFIp5ekw _azF8sIUqEe6hDKKFIp5ekw _MdFD8IUrEe6hDKKFIp5ekw _VEAdgIUrEe6hDKKFIp5ekw _lMWaEIUrEe6hDKKFIp5ekw __ui_AIUuEe6hDKKFIp5ekw" group="_FceAkIUuEe6hDKKFIp5ekw" partition="_FceAkIUuEe6hDKKFIp5ekw">
+    <group xmi:type="uml:ActivityPartition" xmi:id="_FceAkIUuEe6hDKKFIp5ekw" name="Клиент" node="_Ie2QoIUnEe6hDKKFIp5ekw _azF8sIUqEe6hDKKFIp5ekw _MdFD8IUrEe6hDKKFIp5ekw _lMWaEIUrEe6hDKKFIp5ekw _VEAdgIUrEe6hDKKFIp5ekw __ui_AIUuEe6hDKKFIp5ekw"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_Ie2QoIUnEe6hDKKFIp5ekw" name="" inPartition="_FceAkIUuEe6hDKKFIp5ekw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_azF8sIUqEe6hDKKFIp5ekw" name="Клиент сообщает кассиру данные билета" inPartition="_FceAkIUuEe6hDKKFIp5ekw">
+      <body>// TODO body of OpaqueAction1</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_MdFD8IUrEe6hDKKFIp5ekw" name="Клиент получает от кассира разрешение или отказ покупки" inPartition="_FceAkIUuEe6hDKKFIp5ekw">
+      <body>// TODO body of OpaqueAction2</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_VEAdgIUrEe6hDKKFIp5ekw" name="Клиент завершает взаимодействие с кассиром" inPartition="_FceAkIUuEe6hDKKFIp5ekw">
+      <body>// TODO body of OpaqueAction3</body>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_lMWaEIUrEe6hDKKFIp5ekw" name="" inPartition="_FceAkIUuEe6hDKKFIp5ekw"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="__ui_AIUuEe6hDKKFIp5ekw" inPartition="_FceAkIUuEe6hDKKFIp5ekw" behavior="_0_lCQIUrEe6hDKKFIp5ekw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_0_lCQIUrEe6hDKKFIp5ekw" name="Model" node="_4vis4IUrEe6hDKKFIp5ekw _6B_zQIUrEe6hDKKFIp5ekw __x4HMIUrEe6hDKKFIp5ekw _FE3DwIUsEe6hDKKFIp5ekw _ISzmcIUsEe6hDKKFIp5ekw _Rvva8IUsEe6hDKKFIp5ekw __kL0AIUsEe6hDKKFIp5ekw _EnJXkIUtEe6hDKKFIp5ekw _NXvDcIUtEe6hDKKFIp5ekw">
+    <edge xmi:type="uml:ControlFlow" xmi:id="_blxE4IUsEe6hDKKFIp5ekw" name="Документы клиента валидны" target="_ISzmcIUsEe6hDKKFIp5ekw" source="_FE3DwIUsEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_blxE4YUsEe6hDKKFIp5ekw" name="_To_Кассир находит в системе соответствующий требованиям клиента билет_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_blxE4oUsEe6hDKKFIp5ekw" name="_To_Кассир находит в системе соответствующий требованиям клиента билет_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ctdFsIUsEe6hDKKFIp5ekw" name="Документы клиента невалидны" target="_Rvva8IUsEe6hDKKFIp5ekw" source="_FE3DwIUsEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_ctdFsYUsEe6hDKKFIp5ekw" name="_To_Кассир запрещает покупку_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_ctdFsoUsEe6hDKKFIp5ekw" name="_To_Кассир запрещает покупку_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_nEoU4IUsEe6hDKKFIp5ekw" target="_6B_zQIUrEe6hDKKFIp5ekw" source="_4vis4IUrEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_nEoU4YUsEe6hDKKFIp5ekw" name="_To_Кассир получает от клиента запрос на покупку_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_nEoU4oUsEe6hDKKFIp5ekw" name="_To_Кассир получает от клиента запрос на покупку_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_nUze4IUsEe6hDKKFIp5ekw" target="__x4HMIUrEe6hDKKFIp5ekw" source="_6B_zQIUrEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_nUze4YUsEe6hDKKFIp5ekw" name="Кассир получает от клиента запрос на покупку_To_Кассир порверяет документы клиента_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_nUze4oUsEe6hDKKFIp5ekw" name="Кассир получает от клиента запрос на покупку_To_Кассир порверяет документы клиента_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_nvLGsIUsEe6hDKKFIp5ekw" target="_FE3DwIUsEe6hDKKFIp5ekw" source="__x4HMIUrEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_nvLGsYUsEe6hDKKFIp5ekw" name="Кассир порверяет документы клиента_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_nvLGsoUsEe6hDKKFIp5ekw" name="Кассир порверяет документы клиента_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_qQoW0IUsEe6hDKKFIp5ekw" source="_ISzmcIUsEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_qQoW0YUsEe6hDKKFIp5ekw" name="Кассир находит в системе соответствующий требованиям клиента билет_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_qQoW0oUsEe6hDKKFIp5ekw" name="Кассир находит в системе соответствующий требованиям клиента билет_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_C0KXAIUtEe6hDKKFIp5ekw" target="__kL0AIUsEe6hDKKFIp5ekw" source="_ISzmcIUsEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_C0KXAYUtEe6hDKKFIp5ekw" name="Кассир находит в системе соответствующий требованиям клиента билет_To_Кассир оформляет покупку_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_C0KXAoUtEe6hDKKFIp5ekw" name="Кассир находит в системе соответствующий требованиям клиента билет_To_Кассир оформляет покупку_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_F95IEIUtEe6hDKKFIp5ekw" target="_EnJXkIUtEe6hDKKFIp5ekw" source="__kL0AIUsEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_F95IEYUtEe6hDKKFIp5ekw" name="Кассир оформляет покупку_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_F95IEoUtEe6hDKKFIp5ekw" name="Кассир оформляет покупку_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_GYHl8IUtEe6hDKKFIp5ekw" target="_EnJXkIUtEe6hDKKFIp5ekw" source="_Rvva8IUsEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_GYHl8YUtEe6hDKKFIp5ekw" name="Кассир запрещает покупку_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_GYHl8oUtEe6hDKKFIp5ekw" name="Кассир запрещает покупку_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_PNC_QIUtEe6hDKKFIp5ekw" target="_NXvDcIUtEe6hDKKFIp5ekw" source="_EnJXkIUtEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_PNC_QYUtEe6hDKKFIp5ekw" name="_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_PNC_QoUtEe6hDKKFIp5ekw" name="_To__weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_4vis4IUrEe6hDKKFIp5ekw" name="" outgoing="_nEoU4IUsEe6hDKKFIp5ekw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_6B_zQIUrEe6hDKKFIp5ekw" name="Кассир получает от клиента запрос на покупку" incoming="_nEoU4IUsEe6hDKKFIp5ekw" outgoing="_nUze4IUsEe6hDKKFIp5ekw">
+      <body>// TODO body of OpaqueAction1</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="__x4HMIUrEe6hDKKFIp5ekw" name="Кассир порверяет документы клиента" incoming="_nUze4IUsEe6hDKKFIp5ekw" outgoing="_nvLGsIUsEe6hDKKFIp5ekw">
+      <body>// TODO body of OpaqueAction2</body>
+    </node>
+    <node xmi:type="uml:DecisionNode" xmi:id="_FE3DwIUsEe6hDKKFIp5ekw" name="" incoming="_nvLGsIUsEe6hDKKFIp5ekw" outgoing="_blxE4IUsEe6hDKKFIp5ekw _ctdFsIUsEe6hDKKFIp5ekw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ISzmcIUsEe6hDKKFIp5ekw" name="Кассир находит в системе соответствующий требованиям клиента билет" incoming="_blxE4IUsEe6hDKKFIp5ekw" outgoing="_qQoW0IUsEe6hDKKFIp5ekw _C0KXAIUtEe6hDKKFIp5ekw">
+      <body>// TODO body of OpaqueAction3</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Rvva8IUsEe6hDKKFIp5ekw" name="Кассир запрещает покупку" incoming="_ctdFsIUsEe6hDKKFIp5ekw" outgoing="_GYHl8IUtEe6hDKKFIp5ekw">
+      <body>// TODO body of OpaqueAction4</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="__kL0AIUsEe6hDKKFIp5ekw" name="Кассир оформляет покупку" incoming="_C0KXAIUtEe6hDKKFIp5ekw" outgoing="_F95IEIUtEe6hDKKFIp5ekw">
+      <body>// TODO body of OpaqueAction5</body>
+    </node>
+    <node xmi:type="uml:MergeNode" xmi:id="_EnJXkIUtEe6hDKKFIp5ekw" name="" incoming="_F95IEIUtEe6hDKKFIp5ekw _GYHl8IUtEe6hDKKFIp5ekw" outgoing="_PNC_QIUtEe6hDKKFIp5ekw"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_NXvDcIUtEe6hDKKFIp5ekw" name="" incoming="_PNC_QIUtEe6hDKKFIp5ekw"/>
   </packagedElement>
 </uml:Model>

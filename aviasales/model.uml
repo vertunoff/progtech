@@ -110,9 +110,11 @@
   <packagedElement xmi:type="uml:Class" xmi:id="_kQb-8IR8Ee6L8-zQAw4yUA" name="&lt;Entity> Администратор" visibility="public">
     <generalization xmi:id="_sczNgISqEe6L8-zQAw4yUA" general="_qUxmgISpEe6L8-zQAw4yUA"/>
     <ownedOperation xmi:id="_9gjpcISqEe6L8-zQAw4yUA" name="Составление списка билетов" visibility="protected"/>
+    <ownedOperation xmi:id="_ND_III-NEe6kb4niSq1LIw" name="Управление базой пользователей" visibility="protected"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Class" xmi:id="_qUxmgISpEe6L8-zQAw4yUA" name="&lt;Entity> Пользователь" visibility="public">
     <ownedAttribute xmi:id="_wzf9cISpEe6L8-zQAw4yUA" name="id" visibility="private" isID="true">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
       <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_wznSMISpEe6L8-zQAw4yUA" value="1"/>
       <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_wzn5QISpEe6L8-zQAw4yUA" value="1"/>
     </ownedAttribute>
@@ -186,6 +188,7 @@
     <region xmi:id="_Ng3mMIS9Ee6L8-zQAw4yUA" name="Region1"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Activity" xmi:id="_BYcJ4IS_Ee6L8-zQAw4yUA" name="Вход в систему" node="_vDG74IS_Ee6L8-zQAw4yUA _xZ3-8IS_Ee6L8-zQAw4yUA _7-In4IS_Ee6L8-zQAw4yUA __O7qQIS_Ee6L8-zQAw4yUA _IZt-0ITAEe6L8-zQAw4yUA _ik4rMITAEe6L8-zQAw4yUA _suk4AITAEe6L8-zQAw4yUA _05CbMITEEe6L8-zQAw4yUA">
+    <ownedOperation xmi:id="_r-XSUI6gEe6kb4niSq1LIw" name="Operation_1"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_4JaZEIS_Ee6L8-zQAw4yUA" target="_xZ3-8IS_Ee6L8-zQAw4yUA" source="_vDG74IS_Ee6L8-zQAw4yUA">
       <guard xmi:type="uml:LiteralBoolean" xmi:id="_4JaZEYS_Ee6L8-zQAw4yUA" name="_To_Пользователь вводит логин и пароль_guard" value="true"/>
       <weight xmi:type="uml:LiteralInteger" xmi:id="_4JbAIIS_Ee6L8-zQAw4yUA" name="_To_Пользователь вводит логин и пароль_weight"/>
@@ -236,6 +239,9 @@
     <node xmi:type="uml:ActivityFinalNode" xmi:id="_05CbMITEEe6L8-zQAw4yUA" name="" incoming="_2LrHwITEEe6L8-zQAw4yUA"/>
   </packagedElement>
   <packagedElement xmi:type="uml:Activity" xmi:id="_fPvCYITCEe6L8-zQAw4yUA" name="Составление списка билетов" node="_eXjnwITDEe6L8-zQAw4yUA _nOXQYITDEe6L8-zQAw4yUA _0FD2AITDEe6L8-zQAw4yUA _2_BFsITDEe6L8-zQAw4yUA _AJnNAITEEe6L8-zQAw4yUA _NWdo0ITEEe6L8-zQAw4yUA _eky9EITEEe6L8-zQAw4yUA _g4TQwITEEe6L8-zQAw4yUA _8xPtkITEEe6L8-zQAw4yUA _AsyWEITFEe6L8-zQAw4yUA _TSiJMITFEe6L8-zQAw4yUA">
+    <ownedOperation xmi:id="_TV22EI6hEe6kb4niSq1LIw" name="Operation_1"/>
+    <ownedOperation xmi:id="_b_SxEI6hEe6kb4niSq1LIw" name="Operation_2"/>
+    <ownedOperation xmi:id="_kbNNcI6hEe6kb4niSq1LIw" name="Operation_3"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_BJJXYITEEe6L8-zQAw4yUA" name="Билет есть в системе" target="_AJnNAITEEe6L8-zQAw4yUA" source="_0FD2AITDEe6L8-zQAw4yUA">
       <guard xmi:type="uml:LiteralBoolean" xmi:id="_BJJXYYTEEe6L8-zQAw4yUA" name="_To__guard" value="true"/>
       <weight xmi:type="uml:LiteralInteger" xmi:id="_BJJ-cITEEe6L8-zQAw4yUA" name="_To__weight"/>
@@ -310,22 +316,43 @@
     <node xmi:type="uml:MergeNode" xmi:id="_AsyWEITFEe6L8-zQAw4yUA" name="" incoming="_DduzsITFEe6L8-zQAw4yUA _D8z8YITFEe6L8-zQAw4yUA _Ea4_gITFEe6L8-zQAw4yUA" outgoing="_bCuIAITFEe6L8-zQAw4yUA"/>
     <node xmi:type="uml:ActivityFinalNode" xmi:id="_TSiJMITFEe6L8-zQAw4yUA" name="" incoming="_W0sBUITFEe6L8-zQAw4yUA"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Activity" xmi:id="_FIL20IUnEe6hDKKFIp5ekw" name="Model" node="_Ie2QoIUnEe6hDKKFIp5ekw _azF8sIUqEe6hDKKFIp5ekw _MdFD8IUrEe6hDKKFIp5ekw _VEAdgIUrEe6hDKKFIp5ekw _lMWaEIUrEe6hDKKFIp5ekw __ui_AIUuEe6hDKKFIp5ekw" group="_FceAkIUuEe6hDKKFIp5ekw" partition="_FceAkIUuEe6hDKKFIp5ekw">
-    <group xmi:type="uml:ActivityPartition" xmi:id="_FceAkIUuEe6hDKKFIp5ekw" name="Клиент" node="_Ie2QoIUnEe6hDKKFIp5ekw _azF8sIUqEe6hDKKFIp5ekw _MdFD8IUrEe6hDKKFIp5ekw _lMWaEIUrEe6hDKKFIp5ekw _VEAdgIUrEe6hDKKFIp5ekw __ui_AIUuEe6hDKKFIp5ekw"/>
-    <node xmi:type="uml:InitialNode" xmi:id="_Ie2QoIUnEe6hDKKFIp5ekw" name="" inPartition="_FceAkIUuEe6hDKKFIp5ekw"/>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_azF8sIUqEe6hDKKFIp5ekw" name="Клиент сообщает кассиру данные билета" inPartition="_FceAkIUuEe6hDKKFIp5ekw">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_FIL20IUnEe6hDKKFIp5ekw" name="Покупка билета на кассе" node="_Ie2QoIUnEe6hDKKFIp5ekw _azF8sIUqEe6hDKKFIp5ekw _MdFD8IUrEe6hDKKFIp5ekw _VEAdgIUrEe6hDKKFIp5ekw _lMWaEIUrEe6hDKKFIp5ekw __ui_AIUuEe6hDKKFIp5ekw">
+    <ownedOperation xmi:id="_Jns5QI6iEe6kb4niSq1LIw" name="Operation_1"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_YRKKII3rEe69c5tyZ0v3oQ" target="_azF8sIUqEe6hDKKFIp5ekw" source="_Ie2QoIUnEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_YRLYQI3rEe69c5tyZ0v3oQ" name="_To_Клиент сообщает кассиру данные билета_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_YRL_UI3rEe69c5tyZ0v3oQ" name="_To_Клиент сообщает кассиру данные билета_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ach1gI3rEe69c5tyZ0v3oQ" target="__ui_AIUuEe6hDKKFIp5ekw" source="_azF8sIUqEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_ach1gY3rEe69c5tyZ0v3oQ" name="Клиент сообщает кассиру данные билета_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_ach1go3rEe69c5tyZ0v3oQ" name="Клиент сообщает кассиру данные билета_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_btpfII3rEe69c5tyZ0v3oQ" target="_MdFD8IUrEe6hDKKFIp5ekw" source="__ui_AIUuEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_btpfIY3rEe69c5tyZ0v3oQ" name="_To_Клиент получает от кассира разрешение или отказ покупки_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_btpfIo3rEe69c5tyZ0v3oQ" name="_To_Клиент получает от кассира разрешение или отказ покупки_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_cSvwQI3rEe69c5tyZ0v3oQ" target="_VEAdgIUrEe6hDKKFIp5ekw" source="_MdFD8IUrEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_cSvwQY3rEe69c5tyZ0v3oQ" name="Клиент получает от кассира разрешение или отказ покупки_To_Клиент завершает взаимодействие с кассиром_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_cSvwQo3rEe69c5tyZ0v3oQ" name="Клиент получает от кассира разрешение или отказ покупки_To_Клиент завершает взаимодействие с кассиром_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_c6OnAI3rEe69c5tyZ0v3oQ" target="_lMWaEIUrEe6hDKKFIp5ekw" source="_VEAdgIUrEe6hDKKFIp5ekw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_c6OnAY3rEe69c5tyZ0v3oQ" name="Клиент завершает взаимодействие с кассиром_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_c6OnAo3rEe69c5tyZ0v3oQ" name="Клиент завершает взаимодействие с кассиром_To__weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_Ie2QoIUnEe6hDKKFIp5ekw" name="" outgoing="_YRKKII3rEe69c5tyZ0v3oQ"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_azF8sIUqEe6hDKKFIp5ekw" name="Клиент сообщает кассиру данные билета" incoming="_YRKKII3rEe69c5tyZ0v3oQ" outgoing="_ach1gI3rEe69c5tyZ0v3oQ">
       <body>// TODO body of OpaqueAction1</body>
     </node>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_MdFD8IUrEe6hDKKFIp5ekw" name="Клиент получает от кассира разрешение или отказ покупки" inPartition="_FceAkIUuEe6hDKKFIp5ekw">
+    <node xmi:type="uml:OpaqueAction" xmi:id="_MdFD8IUrEe6hDKKFIp5ekw" name="Клиент получает от кассира разрешение или отказ покупки" incoming="_btpfII3rEe69c5tyZ0v3oQ" outgoing="_cSvwQI3rEe69c5tyZ0v3oQ">
       <body>// TODO body of OpaqueAction2</body>
     </node>
-    <node xmi:type="uml:OpaqueAction" xmi:id="_VEAdgIUrEe6hDKKFIp5ekw" name="Клиент завершает взаимодействие с кассиром" inPartition="_FceAkIUuEe6hDKKFIp5ekw">
+    <node xmi:type="uml:OpaqueAction" xmi:id="_VEAdgIUrEe6hDKKFIp5ekw" name="Клиент завершает взаимодействие с кассиром" incoming="_cSvwQI3rEe69c5tyZ0v3oQ" outgoing="_c6OnAI3rEe69c5tyZ0v3oQ">
       <body>// TODO body of OpaqueAction3</body>
     </node>
-    <node xmi:type="uml:ActivityFinalNode" xmi:id="_lMWaEIUrEe6hDKKFIp5ekw" name="" inPartition="_FceAkIUuEe6hDKKFIp5ekw"/>
-    <node xmi:type="uml:CallBehaviorAction" xmi:id="__ui_AIUuEe6hDKKFIp5ekw" inPartition="_FceAkIUuEe6hDKKFIp5ekw" behavior="_0_lCQIUrEe6hDKKFIp5ekw"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_lMWaEIUrEe6hDKKFIp5ekw" name="" incoming="_c6OnAI3rEe69c5tyZ0v3oQ"/>
+    <node xmi:type="uml:CallBehaviorAction" xmi:id="__ui_AIUuEe6hDKKFIp5ekw" incoming="_ach1gI3rEe69c5tyZ0v3oQ" outgoing="_btpfII3rEe69c5tyZ0v3oQ" behavior="_0_lCQIUrEe6hDKKFIp5ekw"/>
   </packagedElement>
-  <packagedElement xmi:type="uml:Activity" xmi:id="_0_lCQIUrEe6hDKKFIp5ekw" name="Model" node="_4vis4IUrEe6hDKKFIp5ekw _6B_zQIUrEe6hDKKFIp5ekw __x4HMIUrEe6hDKKFIp5ekw _FE3DwIUsEe6hDKKFIp5ekw _ISzmcIUsEe6hDKKFIp5ekw _Rvva8IUsEe6hDKKFIp5ekw __kL0AIUsEe6hDKKFIp5ekw _EnJXkIUtEe6hDKKFIp5ekw _NXvDcIUtEe6hDKKFIp5ekw">
+  <packagedElement xmi:type="uml:Activity" xmi:id="_0_lCQIUrEe6hDKKFIp5ekw" name="Проверка документов" node="_4vis4IUrEe6hDKKFIp5ekw _6B_zQIUrEe6hDKKFIp5ekw __x4HMIUrEe6hDKKFIp5ekw _FE3DwIUsEe6hDKKFIp5ekw _ISzmcIUsEe6hDKKFIp5ekw _Rvva8IUsEe6hDKKFIp5ekw __kL0AIUsEe6hDKKFIp5ekw _EnJXkIUtEe6hDKKFIp5ekw _NXvDcIUtEe6hDKKFIp5ekw">
+    <ownedOperation xmi:id="_kwV6gI6iEe6kb4niSq1LIw" name="Operation_1"/>
     <edge xmi:type="uml:ControlFlow" xmi:id="_blxE4IUsEe6hDKKFIp5ekw" name="Документы клиента валидны" target="_ISzmcIUsEe6hDKKFIp5ekw" source="_FE3DwIUsEe6hDKKFIp5ekw">
       <guard xmi:type="uml:LiteralBoolean" xmi:id="_blxE4YUsEe6hDKKFIp5ekw" name="_To_Кассир находит в системе соответствующий требованиям клиента билет_guard" value="true"/>
       <weight xmi:type="uml:LiteralInteger" xmi:id="_blxE4oUsEe6hDKKFIp5ekw" name="_To_Кассир находит в системе соответствующий требованиям клиента билет_weight"/>
@@ -385,5 +412,711 @@
     </node>
     <node xmi:type="uml:MergeNode" xmi:id="_EnJXkIUtEe6hDKKFIp5ekw" name="" incoming="_F95IEIUtEe6hDKKFIp5ekw _GYHl8IUtEe6hDKKFIp5ekw" outgoing="_PNC_QIUtEe6hDKKFIp5ekw"/>
     <node xmi:type="uml:ActivityFinalNode" xmi:id="_NXvDcIUtEe6hDKKFIp5ekw" name="" incoming="_PNC_QIUtEe6hDKKFIp5ekw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_t_2NsI33Ee69c5tyZ0v3oQ" name="&lt;Boundary> Ошибка аутентификации" visibility="public">
+    <ownedOperation xmi:id="_6DY4EI33Ee69c5tyZ0v3oQ" name="Проверка логина и пароля" visibility="protected"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_AyAsMI34Ee69c5tyZ0v3oQ" name="&lt;Boundary> Ошибка изменения билета" visibility="public">
+    <ownedOperation xmi:id="_SW6GUI34Ee69c5tyZ0v3oQ" name="Проверка наличия билета в системе" visibility="protected"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_nR6goI34Ee69c5tyZ0v3oQ" memberEnd="_nR6goY34Ee69c5tyZ0v3oQ _nR6gpI34Ee69c5tyZ0v3oQ" navigableOwnedEnd="_nR6goY34Ee69c5tyZ0v3oQ _nR6gpI34Ee69c5tyZ0v3oQ">
+    <ownedEnd xmi:id="_nR6goY34Ee69c5tyZ0v3oQ" name="&lt;Control> Редактирование списка билетовs" type="_7JXTIISrEe6L8-zQAw4yUA" association="_nR6goI34Ee69c5tyZ0v3oQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nR6goo34Ee69c5tyZ0v3oQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nR6go434Ee69c5tyZ0v3oQ" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_nR6gpI34Ee69c5tyZ0v3oQ" name="&lt;Boundary> Ошибка изменения билетаs" type="_AyAsMI34Ee69c5tyZ0v3oQ" association="_nR6goI34Ee69c5tyZ0v3oQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_nR6gpY34Ee69c5tyZ0v3oQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_nR6gpo34Ee69c5tyZ0v3oQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_FWrUwI35Ee69c5tyZ0v3oQ" name="&lt;Entity> Билет" visibility="public">
+    <generalization xmi:id="_J4Ki8I35Ee69c5tyZ0v3oQ" general="_qUxmgISpEe6L8-zQAw4yUA"/>
+    <ownedAttribute xmi:id="_K93mwI35Ee69c5tyZ0v3oQ" name="Место вылета" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_K94N0I35Ee69c5tyZ0v3oQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K94N0Y35Ee69c5tyZ0v3oQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_TS0fgI35Ee69c5tyZ0v3oQ" name="Место прилета" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_TS0fgY35Ee69c5tyZ0v3oQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_TS0fgo35Ee69c5tyZ0v3oQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_V-ZU8I35Ee69c5tyZ0v3oQ" name="Дата вылета " visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_V-Z8AI35Ee69c5tyZ0v3oQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_V-Z8AY35Ee69c5tyZ0v3oQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_Y08EQI35Ee69c5tyZ0v3oQ" name="Дата прилета" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Y08EQY35Ee69c5tyZ0v3oQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Y08EQo35Ee69c5tyZ0v3oQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_byFx4I35Ee69c5tyZ0v3oQ" name="Воздушное судно" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_byFx4Y35Ee69c5tyZ0v3oQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_byFx4o35Ee69c5tyZ0v3oQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_iezhgI35Ee69c5tyZ0v3oQ" name="Авиакомпания" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_iezhgY35Ee69c5tyZ0v3oQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_iezhgo35Ee69c5tyZ0v3oQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="__fCWgI35Ee69c5tyZ0v3oQ" name="Цена" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="__fCWgY35Ee69c5tyZ0v3oQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="__fCWgo35Ee69c5tyZ0v3oQ" value="100000"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_LoSnUI36Ee69c5tyZ0v3oQ" name="Класс" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_LoSnUY36Ee69c5tyZ0v3oQ" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_LoTOYI36Ee69c5tyZ0v3oQ" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_yRwK8I37Ee69c5tyZ0v3oQ" name="Свободные места" visibility="public">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_yRwK8Y37Ee69c5tyZ0v3oQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_yRwK8o37Ee69c5tyZ0v3oQ" value="1"/>
+    </ownedAttribute>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bh3SoI37Ee69c5tyZ0v3oQ" name="&lt;Control> База данных" visibility="public">
+    <ownedAttribute xmi:id="_kvW1kI3-Ee6kb4niSq1LIw" name="Билеты[] list" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_kvYqwI3-Ee6kb4niSq1LIw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_kvYqwY3-Ee6kb4niSq1LIw" value="1"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_SwrXkI4AEe6kb4niSq1LIw" name="Пользователи[] list" visibility="public">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_SwrXkY4AEe6kb4niSq1LIw" value="1"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_SwrXko4AEe6kb4niSq1LIw" value="1"/>
+    </ownedAttribute>
+    <ownedOperation xmi:id="_1V10wI4AEe6kb4niSq1LIw" name="Поиск билета" visibility="protected"/>
+    <ownedOperation xmi:id="_3jszcI4AEe6kb4niSq1LIw" name="Поиск пользователя" visibility="protected"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_vN8pcI4AEe6kb4niSq1LIw" memberEnd="_vN8pcY4AEe6kb4niSq1LIw _vN8pdI4AEe6kb4niSq1LIw" navigableOwnedEnd="_vN8pcY4AEe6kb4niSq1LIw _vN8pdI4AEe6kb4niSq1LIw">
+    <ownedEnd xmi:id="_vN8pcY4AEe6kb4niSq1LIw" name="&lt;Control> База данныхs" type="_bh3SoI37Ee69c5tyZ0v3oQ" association="_vN8pcI4AEe6kb4niSq1LIw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vN8pco4AEe6kb4niSq1LIw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vN8pc44AEe6kb4niSq1LIw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_vN8pdI4AEe6kb4niSq1LIw" name="&lt;Entity> Пользовательs" type="_qUxmgISpEe6L8-zQAw4yUA" association="_vN8pcI4AEe6kb4niSq1LIw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_vN8pdY4AEe6kb4niSq1LIw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_vN8pdo4AEe6kb4niSq1LIw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_GVPVII4BEe6kb4niSq1LIw" name="&lt;Boundary>Ошибка поиска билета" visibility="public">
+    <ownedOperation xmi:id="_VnO4gI4BEe6kb4niSq1LIw" name="Проверка наличия билета в системе" visibility="protected"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_J9nxEI4BEe6kb4niSq1LIw" memberEnd="_J9nxEY4BEe6kb4niSq1LIw _J9nxFI4BEe6kb4niSq1LIw" navigableOwnedEnd="_J9nxEY4BEe6kb4niSq1LIw _J9nxFI4BEe6kb4niSq1LIw">
+    <ownedEnd xmi:id="_J9nxEY4BEe6kb4niSq1LIw" name="&lt;Control> Выбор билетаs" type="_pcuYoISzEe6L8-zQAw4yUA" association="_J9nxEI4BEe6kb4niSq1LIw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J9nxEo4BEe6kb4niSq1LIw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J9nxE44BEe6kb4niSq1LIw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_J9nxFI4BEe6kb4niSq1LIw" name="&lt;Boundary>Ошибка поиска билетаs" type="_GVPVII4BEe6kb4niSq1LIw" association="_J9nxEI4BEe6kb4niSq1LIw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_J9nxFY4BEe6kb4niSq1LIw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_J9nxFo4BEe6kb4niSq1LIw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_mJtzYI4BEe6kb4niSq1LIw" name="Покупка билета на сайте" node="_scnU0I4BEe6kb4niSq1LIw _jxNikI4PEe6kb4niSq1LIw _hnFX4I4QEe6kb4niSq1LIw _oJvMkI4QEe6kb4niSq1LIw _yhqNMI4REe6kb4niSq1LIw _ZH4FAI4SEe6kb4niSq1LIw _bk5hEI4SEe6kb4niSq1LIw">
+    <ownedOperation xmi:id="_Ew0NYI6jEe6kb4niSq1LIw" name="Operation_1"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_m5IgUI4QEe6kb4niSq1LIw" target="_hnFX4I4QEe6kb4niSq1LIw" source="_jxNikI4PEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_m5JHYI4QEe6kb4niSq1LIw" name="Клиент выбирает билет_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_m5JHYY4QEe6kb4niSq1LIw" name="Клиент выбирает билет_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_1DIrcI4REe6kb4niSq1LIw" name="Билет недоступен" target="_yhqNMI4REe6kb4niSq1LIw" source="_hnFX4I4QEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_KoxXII4SEe6kb4niSq1LIw" name="null_guard">
+        <body>Билет недоступен</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_1DIrco4REe6kb4niSq1LIw" name="_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_360qQI4REe6kb4niSq1LIw" name="Билет доступен" target="_oJvMkI4QEe6kb4niSq1LIw" source="_hnFX4I4QEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_HhSo0I4SEe6kb4niSq1LIw" name="null_guard">
+        <body>Билет доступен</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_361RUY4REe6kb4niSq1LIw" name="_To_Клиент производит оплату банковской картой_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_LmBCgI4SEe6kb4niSq1LIw" target="_yhqNMI4REe6kb4niSq1LIw" source="_scnU0I4BEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_LmBpkI4SEe6kb4niSq1LIw" name="_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_LmBpkY4SEe6kb4niSq1LIw" name="_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_MAYDQI4SEe6kb4niSq1LIw" target="_jxNikI4PEe6kb4niSq1LIw" source="_yhqNMI4REe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_MAYDQY4SEe6kb4niSq1LIw" name="_To_Клиент выбирает билет_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_MAYDQo4SEe6kb4niSq1LIw" name="_To_Клиент выбирает билет_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_fxnZII4SEe6kb4niSq1LIw" target="_ZH4FAI4SEe6kb4niSq1LIw" source="_oJvMkI4QEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_fxnZIY4SEe6kb4niSq1LIw" name="Клиент производит оплату банковской картой_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_fxoAMI4SEe6kb4niSq1LIw" name="Клиент производит оплату банковской картой_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_hbW-II4SEe6kb4niSq1LIw" name="Достаточно средств" target="_bk5hEI4SEe6kb4niSq1LIw" source="_ZH4FAI4SEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_ugiEoI4SEe6kb4niSq1LIw" name="null_guard">
+        <body>Достаточно средств</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_hbXlMY4SEe6kb4niSq1LIw" name="_To_Покупка завершена_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jdkGcI4SEe6kb4niSq1LIw" name=" Недостаточно средств" target="_yhqNMI4REe6kb4niSq1LIw" source="_ZH4FAI4SEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_rQZwoI4SEe6kb4niSq1LIw" name="null_guard">
+        <body> Недостаточно средств</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jdkGco4SEe6kb4niSq1LIw" name="_To__weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_scnU0I4BEe6kb4niSq1LIw" name="" outgoing="_LmBCgI4SEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jxNikI4PEe6kb4niSq1LIw" name="Клиент выбирает билет" incoming="_MAYDQI4SEe6kb4niSq1LIw" outgoing="_m5IgUI4QEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction1</body>
+    </node>
+    <node xmi:type="uml:DecisionNode" xmi:id="_hnFX4I4QEe6kb4niSq1LIw" name="" incoming="_m5IgUI4QEe6kb4niSq1LIw" outgoing="_1DIrcI4REe6kb4niSq1LIw _360qQI4REe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_oJvMkI4QEe6kb4niSq1LIw" name="Клиент производит оплату банковской картой" incoming="_360qQI4REe6kb4niSq1LIw" outgoing="_fxnZII4SEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction2</body>
+    </node>
+    <node xmi:type="uml:MergeNode" xmi:id="_yhqNMI4REe6kb4niSq1LIw" name="" incoming="_1DIrcI4REe6kb4niSq1LIw _LmBCgI4SEe6kb4niSq1LIw _jdkGcI4SEe6kb4niSq1LIw" outgoing="_MAYDQI4SEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_ZH4FAI4SEe6kb4niSq1LIw" name="" incoming="_fxnZII4SEe6kb4niSq1LIw" outgoing="_hbW-II4SEe6kb4niSq1LIw _jdkGcI4SEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_bk5hEI4SEe6kb4niSq1LIw" name="Покупка завершена" incoming="_hbW-II4SEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction3</body>
+    </node>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_0FSGoI4SEe6kb4niSq1LIw" name="Возврат билета на кассе" node="_WCyt8I4TEe6kb4niSq1LIw _ZimcsI4TEe6kb4niSq1LIw _IkXvEI4VEe6kb4niSq1LIw _Zs8usI4XEe6kb4niSq1LIw _VgzFEI4cEe6kb4niSq1LIw _dcXNcI4cEe6kb4niSq1LIw" group="_QKk9YI4TEe6kb4niSq1LIw _Ndj9gI4TEe6kb4niSq1LIw" partition="_Ndj9gI4TEe6kb4niSq1LIw _QKk9YI4TEe6kb4niSq1LIw">
+    <ownedOperation xmi:id="_sL1pcI6nEe6kb4niSq1LIw" name="Operation_1"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_N0oHwI4VEe6kb4niSq1LIw" target="_IkXvEI4VEe6kb4niSq1LIw" source="_ZimcsI4TEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_N0oHwY4VEe6kb4niSq1LIw" name="Клиент запрашивает возврат одного из купленных билетов_To_Кассир находит билет в базе_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_N0ou0I4VEe6kb4niSq1LIw" name="Клиент запрашивает возврат одного из купленных билетов_To_Кассир находит билет в базе_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_ijhGwI4XEe6kb4niSq1LIw" target="_Zs8usI4XEe6kb4niSq1LIw" source="_IkXvEI4VEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_ijht0I4XEe6kb4niSq1LIw" name="Кассир находит билет в базе_To_Кассир производит возврат билета_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_ijht0Y4XEe6kb4niSq1LIw" name="Кассир находит билет в базе_To_Кассир производит возврат билета_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_RlCaII4cEe6kb4niSq1LIw" target="_ZimcsI4TEe6kb4niSq1LIw" source="_WCyt8I4TEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_RlCaIY4cEe6kb4niSq1LIw" name="_To_Клиент запрашивает возврат одного из купленных билетов_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_RlCaIo4cEe6kb4niSq1LIw" name="_To_Клиент запрашивает возврат одного из купленных билетов_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_bBqsoI4cEe6kb4niSq1LIw" target="_VgzFEI4cEe6kb4niSq1LIw" source="_Zs8usI4XEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_bBqsoY4cEe6kb4niSq1LIw" name="Кассир производит возврат билета_To_Завершение взаимодействия с кассиром_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_bBqsoo4cEe6kb4niSq1LIw" name="Кассир производит возврат билета_To_Завершение взаимодействия с кассиром_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_hTmkwI4cEe6kb4niSq1LIw" target="_dcXNcI4cEe6kb4niSq1LIw" source="_VgzFEI4cEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_hTnL0I4cEe6kb4niSq1LIw" name="Завершение взаимодействия с кассиром_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_hTnL0Y4cEe6kb4niSq1LIw" name="Завершение взаимодействия с кассиром_To__weight"/>
+    </edge>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_Ndj9gI4TEe6kb4niSq1LIw" name="Клиент" node="_WCyt8I4TEe6kb4niSq1LIw _ZimcsI4TEe6kb4niSq1LIw _VgzFEI4cEe6kb4niSq1LIw _dcXNcI4cEe6kb4niSq1LIw"/>
+    <group xmi:type="uml:ActivityPartition" xmi:id="_QKk9YI4TEe6kb4niSq1LIw" name="Кассир" node="_IkXvEI4VEe6kb4niSq1LIw _Zs8usI4XEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:InitialNode" xmi:id="_WCyt8I4TEe6kb4niSq1LIw" name="" outgoing="_RlCaII4cEe6kb4niSq1LIw" inPartition="_Ndj9gI4TEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_ZimcsI4TEe6kb4niSq1LIw" name="Клиент запрашивает возврат одного из акутальных купленных билетов" incoming="_RlCaII4cEe6kb4niSq1LIw" outgoing="_N0oHwI4VEe6kb4niSq1LIw" inPartition="_Ndj9gI4TEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction1</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_IkXvEI4VEe6kb4niSq1LIw" name="Кассир находит билет в базе" incoming="_N0oHwI4VEe6kb4niSq1LIw" outgoing="_ijhGwI4XEe6kb4niSq1LIw" inPartition="_QKk9YI4TEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction2</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_Zs8usI4XEe6kb4niSq1LIw" name="Кассир производит возврат билета" incoming="_ijhGwI4XEe6kb4niSq1LIw" outgoing="_bBqsoI4cEe6kb4niSq1LIw" inPartition="_QKk9YI4TEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction3</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_VgzFEI4cEe6kb4niSq1LIw" name="Завершение взаимодействия с кассиром" incoming="_bBqsoI4cEe6kb4niSq1LIw" outgoing="_hTmkwI4cEe6kb4niSq1LIw" inPartition="_Ndj9gI4TEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction4</body>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_dcXNcI4cEe6kb4niSq1LIw" name="" incoming="_hTmkwI4cEe6kb4niSq1LIw" inPartition="_Ndj9gI4TEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_SmnWcI4dEe6kb4niSq1LIw" name="Возврат билета на сайте" node="_XlsXMI4rEe6kb4niSq1LIw _g4cU8I4rEe6kb4niSq1LIw _mjtOoI4rEe6kb4niSq1LIw _r1i7sI4rEe6kb4niSq1LIw _tSYGEI4rEe6kb4niSq1LIw _zUn8YI4rEe6kb4niSq1LIw _8dOfoI4rEe6kb4niSq1LIw">
+    <ownedOperation xmi:id="_YYVmkI6jEe6kb4niSq1LIw" name="Operation_1"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_0vnTsI4rEe6kb4niSq1LIw" target="_g4cU8I4rEe6kb4niSq1LIw" source="_XlsXMI4rEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_0vnTsY4rEe6kb4niSq1LIw" name="_To_Клиент выбирает один из акутальных купленных билетов_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_0vnTso4rEe6kb4niSq1LIw" name="_To_Клиент выбирает один из акутальных купленных билетов_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_1s0i0I4rEe6kb4niSq1LIw" target="_r1i7sI4rEe6kb4niSq1LIw" source="_mjtOoI4rEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_1s0i0Y4rEe6kb4niSq1LIw" name="Клиент вводит данные карты для поступления средств_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_1s0i0o4rEe6kb4niSq1LIw" name="Клиент вводит данные карты для поступления средств_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_2LpM0I4rEe6kb4niSq1LIw" name="Карта действительна" target="_tSYGEI4rEe6kb4niSq1LIw" source="_r1i7sI4rEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_EfMK8I4sEe6kb4niSq1LIw" name="null_guard">
+        <body>Карта действительна</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_2LpM0o4rEe6kb4niSq1LIw" name="_To_Возврат средств и завершение операции_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_2vCNwI4rEe6kb4niSq1LIw" target="_zUn8YI4rEe6kb4niSq1LIw" source="_tSYGEI4rEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_2vCNwY4rEe6kb4niSq1LIw" name="Возврат средств и завершение операции_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_2vCNwo4rEe6kb4niSq1LIw" name="Возврат средств и завершение операции_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="__kvqMI4rEe6kb4niSq1LIw" name="Карта не действительна" target="_8dOfoI4rEe6kb4niSq1LIw" source="_r1i7sI4rEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_Gt5eMI4sEe6kb4niSq1LIw" name="null_guard">
+        <body>Карта не действительна</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="__kvqMo4rEe6kb4niSq1LIw" name="_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BEEu8I4sEe6kb4niSq1LIw" target="_8dOfoI4rEe6kb4niSq1LIw" source="_g4cU8I4rEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_BEEu8Y4sEe6kb4niSq1LIw" name="Клиент выбирает один из акутальных купленных билетов_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_BEEu8o4sEe6kb4niSq1LIw" name="Клиент выбирает один из акутальных купленных билетов_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_BuXpII4sEe6kb4niSq1LIw" target="_mjtOoI4rEe6kb4niSq1LIw" source="_8dOfoI4rEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_BuXpIY4sEe6kb4niSq1LIw" name="_To_Клиент вводит данные карты для поступления средств_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_BuXpIo4sEe6kb4niSq1LIw" name="_To_Клиент вводит данные карты для поступления средств_weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_XlsXMI4rEe6kb4niSq1LIw" name="" outgoing="_0vnTsI4rEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_g4cU8I4rEe6kb4niSq1LIw" name="Клиент выбирает один из акутальных купленных билетов" incoming="_0vnTsI4rEe6kb4niSq1LIw" outgoing="_BEEu8I4sEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction1</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_mjtOoI4rEe6kb4niSq1LIw" name="Клиент вводит данные карты для поступления средств" incoming="_BuXpII4sEe6kb4niSq1LIw" outgoing="_1s0i0I4rEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction2</body>
+    </node>
+    <node xmi:type="uml:DecisionNode" xmi:id="_r1i7sI4rEe6kb4niSq1LIw" name="" incoming="_1s0i0I4rEe6kb4niSq1LIw" outgoing="_2LpM0I4rEe6kb4niSq1LIw __kvqMI4rEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_tSYGEI4rEe6kb4niSq1LIw" name="Возврат средств и завершение операции" incoming="_2LpM0I4rEe6kb4niSq1LIw" outgoing="_2vCNwI4rEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction3</body>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_zUn8YI4rEe6kb4niSq1LIw" name="" incoming="_2vCNwI4rEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_8dOfoI4rEe6kb4niSq1LIw" name="" incoming="__kvqMI4rEe6kb4niSq1LIw _BEEu8I4sEe6kb4niSq1LIw" outgoing="_BuXpII4sEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_FvmtsI6fEe6kb4niSq1LIw" memberEnd="_FvmtsY6fEe6kb4niSq1LIw _FvnUwY6fEe6kb4niSq1LIw" navigableOwnedEnd="_FvmtsY6fEe6kb4niSq1LIw _FvnUwY6fEe6kb4niSq1LIw">
+    <ownedEnd xmi:id="_FvmtsY6fEe6kb4niSq1LIw" name="&lt;Entity> Пользовательs" type="_qUxmgISpEe6L8-zQAw4yUA" association="_FvmtsI6fEe6kb4niSq1LIw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_Fvmtso6fEe6kb4niSq1LIw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FvnUwI6fEe6kb4niSq1LIw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_FvnUwY6fEe6kb4niSq1LIw" name="&lt;Boundary> Ошибка аутентификацииs" type="_t_2NsI33Ee69c5tyZ0v3oQ" association="_FvmtsI6fEe6kb4niSq1LIw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_FvnUwo6fEe6kb4niSq1LIw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_FvnUw46fEe6kb4niSq1LIw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_RQ7mYI6gEe6kb4niSq1LIw" name="Вход в систему">
+    <ownedAttribute xmi:id="_fja0kI6gEe6kb4niSq1LIw" name="Пользователь" type="_xHfGcFklEe65guxbNlHEhg"/>
+    <ownedAttribute xmi:id="_kHD-4I6gEe6kb4niSq1LIw" name="Вход в систему" type="_BYcJ4IS_Ee6L8-zQAw4yUA"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_r-bjwI6gEe6kb4niSq1LIw" name="Operation_1"/>
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_ADyO0I6pEe6kb4niSq1LIw" name="Вход в систему">
+      <ownedAttribute xmi:id="_ADyO0Y6pEe6kb4niSq1LIw" name="Пользователь" type="_xHfGcFklEe65guxbNlHEhg"/>
+      <ownedAttribute xmi:id="_ADyO0o6pEe6kb4niSq1LIw" name="Вход в систему" type="_BYcJ4IS_Ee6L8-zQAw4yUA"/>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_ADyO046pEe6kb4niSq1LIw" name="Operation_1"/>
+      <lifeline xmi:id="_ADyO1I6pEe6kb4niSq1LIw" name="Пользователь" represents="_ADyO0Y6pEe6kb4niSq1LIw" coveredBy="_ADyO1o6pEe6kb4niSq1LIw _ADyO2o6pEe6kb4niSq1LIw"/>
+      <lifeline xmi:id="_ADyO1Y6pEe6kb4niSq1LIw" name="Вход в систему" represents="_ADyO0o6pEe6kb4niSq1LIw" coveredBy="_ADyO146pEe6kb4niSq1LIw _ADyO2I6pEe6kb4niSq1LIw _ADyO2Y6pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ADyO1o6pEe6kb4niSq1LIw" name="Operation_1_sender" covered="_ADyO1I6pEe6kb4niSq1LIw" message="_ADyO246pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ADyO146pEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_ADyO1Y6pEe6kb4niSq1LIw" message="_ADyO246pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_ADyO2I6pEe6kb4niSq1LIw" name="Вход в систему" covered="_ADyO1Y6pEe6kb4niSq1LIw" finish="_ADyO2Y6pEe6kb4niSq1LIw" start="_ADyO146pEe6kb4niSq1LIw" behavior="_ADyO046pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ADyO2Y6pEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_ADyO1Y6pEe6kb4niSq1LIw" message="_ADyO3I6pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_ADyO2o6pEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_ADyO1I6pEe6kb4niSq1LIw" message="_ADyO3I6pEe6kb4niSq1LIw"/>
+      <message xmi:id="_ADyO246pEe6kb4niSq1LIw" name="Вход в систему" receiveEvent="_ADyO146pEe6kb4niSq1LIw" sendEvent="_ADyO1o6pEe6kb4niSq1LIw" signature="_r-XSUI6gEe6kb4niSq1LIw"/>
+      <message xmi:id="_ADyO3I6pEe6kb4niSq1LIw" name="Вход в систему" messageSort="reply" receiveEvent="_ADyO2o6pEe6kb4niSq1LIw" sendEvent="_ADyO2Y6pEe6kb4niSq1LIw"/>
+    </ownedBehavior>
+    <lifeline xmi:id="_fja0kY6gEe6kb4niSq1LIw" name="Пользователь" represents="_fja0kI6gEe6kb4niSq1LIw" coveredBy="_r-bjwo6gEe6kb4niSq1LIw _r-bjxo6gEe6kb4niSq1LIw"/>
+    <lifeline xmi:id="_kHD-4Y6gEe6kb4niSq1LIw" name="Вход в систему" represents="_kHD-4I6gEe6kb4niSq1LIw" coveredBy="_r-bjw46gEe6kb4niSq1LIw _r-bjxY6gEe6kb4niSq1LIw _r-bjxI6gEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r-bjwo6gEe6kb4niSq1LIw" name="Operation_1_sender" covered="_fja0kY6gEe6kb4niSq1LIw" message="_r-aVoI6gEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r-bjw46gEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_kHD-4Y6gEe6kb4niSq1LIw" message="_r-aVoI6gEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_r-bjxY6gEe6kb4niSq1LIw" name="Вход в систему" covered="_kHD-4Y6gEe6kb4niSq1LIw" finish="_r-bjxI6gEe6kb4niSq1LIw" start="_r-bjw46gEe6kb4niSq1LIw" behavior="_r-bjwI6gEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r-bjxI6gEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_kHD-4Y6gEe6kb4niSq1LIw" message="_r-bjwY6gEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_r-bjxo6gEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_fja0kY6gEe6kb4niSq1LIw" message="_r-bjwY6gEe6kb4niSq1LIw"/>
+    <message xmi:id="_r-aVoI6gEe6kb4niSq1LIw" name="Вход в систему" receiveEvent="_r-bjw46gEe6kb4niSq1LIw" sendEvent="_r-bjwo6gEe6kb4niSq1LIw" signature="_r-XSUI6gEe6kb4niSq1LIw"/>
+    <message xmi:id="_r-bjwY6gEe6kb4niSq1LIw" name="Вход в систему" messageSort="reply" receiveEvent="_r-bjxo6gEe6kb4niSq1LIw" sendEvent="_r-bjxI6gEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_2-Vm4I6gEe6kb4niSq1LIw" name="Составление списка билетов">
+    <ownedAttribute xmi:id="_MubPEI6hEe6kb4niSq1LIw" name="Администратор" type="_vuCpEFjqEe6tB_ecadr44w"/>
+    <ownedAttribute xmi:id="_OXxygI6hEe6kb4niSq1LIw" name="Составление списка билетов" type="_fPvCYITCEe6L8-zQAw4yUA"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_TV22Eo6hEe6kb4niSq1LIw" name="Operation_1"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_b_TYIY6hEe6kb4niSq1LIw" name="Operation_2"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_kbN0gI6hEe6kb4niSq1LIw" name="Operation_3"/>
+    <lifeline xmi:id="_MubPEY6hEe6kb4niSq1LIw" name="Администратор" represents="_MubPEI6hEe6kb4niSq1LIw" coveredBy="_TV22FI6hEe6kb4niSq1LIw _TV22GI6hEe6kb4niSq1LIw _b_TYI46hEe6kb4niSq1LIw _b_TYJ46hEe6kb4niSq1LIw _kbN0go6hEe6kb4niSq1LIw _kbN0ho6hEe6kb4niSq1LIw"/>
+    <lifeline xmi:id="_OXxygY6hEe6kb4niSq1LIw" name="Составление списка билетов" represents="_OXxygI6hEe6kb4niSq1LIw" coveredBy="_TV22FY6hEe6kb4niSq1LIw _TV22F46hEe6kb4niSq1LIw _TV22Fo6hEe6kb4niSq1LIw _b_TYJI6hEe6kb4niSq1LIw _b_TYJo6hEe6kb4niSq1LIw _b_TYJY6hEe6kb4niSq1LIw _kbN0g46hEe6kb4niSq1LIw _kbN0hY6hEe6kb4niSq1LIw _kbN0hI6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TV22FI6hEe6kb4niSq1LIw" name="Operation_1_sender" covered="_MubPEY6hEe6kb4niSq1LIw" message="_TV22EY6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TV22FY6hEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_OXxygY6hEe6kb4niSq1LIw" message="_TV22EY6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_TV22F46hEe6kb4niSq1LIw" name="Добавление билета" covered="_OXxygY6hEe6kb4niSq1LIw" finish="_TV22Fo6hEe6kb4niSq1LIw" start="_TV22FY6hEe6kb4niSq1LIw" behavior="_TV22Eo6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TV22Fo6hEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_OXxygY6hEe6kb4niSq1LIw" message="_TV22E46hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_TV22GI6hEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_MubPEY6hEe6kb4niSq1LIw" message="_TV22E46hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_b_TYI46hEe6kb4niSq1LIw" name="Operation_2_sender" covered="_MubPEY6hEe6kb4niSq1LIw" message="_b_TYII6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_b_TYJI6hEe6kb4niSq1LIw" name="Operation_2_receiver" covered="_OXxygY6hEe6kb4niSq1LIw" message="_b_TYII6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_b_TYJo6hEe6kb4niSq1LIw" name="Редактирование деталей билета" covered="_OXxygY6hEe6kb4niSq1LIw" finish="_b_TYJY6hEe6kb4niSq1LIw" start="_b_TYJI6hEe6kb4niSq1LIw" behavior="_b_TYIY6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_b_TYJY6hEe6kb4niSq1LIw" name="Operation_2_reply_sender" covered="_OXxygY6hEe6kb4niSq1LIw" message="_b_TYIo6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_b_TYJ46hEe6kb4niSq1LIw" name="Operation_2_reply_receiver" covered="_MubPEY6hEe6kb4niSq1LIw" message="_b_TYIo6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kbN0go6hEe6kb4niSq1LIw" name="Operation_3_sender" covered="_MubPEY6hEe6kb4niSq1LIw" message="_kbNNcY6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kbN0g46hEe6kb4niSq1LIw" name="Operation_3_receiver" covered="_OXxygY6hEe6kb4niSq1LIw" message="_kbNNcY6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_kbN0hY6hEe6kb4niSq1LIw" name="Удаление билета" covered="_OXxygY6hEe6kb4niSq1LIw" finish="_kbN0hI6hEe6kb4niSq1LIw" start="_kbN0g46hEe6kb4niSq1LIw" behavior="_kbN0gI6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kbN0hI6hEe6kb4niSq1LIw" name="Operation_3_reply_sender" covered="_OXxygY6hEe6kb4niSq1LIw" message="_kbN0gY6hEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kbN0ho6hEe6kb4niSq1LIw" name="Operation_3_reply_receiver" covered="_MubPEY6hEe6kb4niSq1LIw" message="_kbN0gY6hEe6kb4niSq1LIw"/>
+    <message xmi:id="_TV22EY6hEe6kb4niSq1LIw" name="Добавление билета" receiveEvent="_TV22FY6hEe6kb4niSq1LIw" sendEvent="_TV22FI6hEe6kb4niSq1LIw" signature="_TV22EI6hEe6kb4niSq1LIw"/>
+    <message xmi:id="_TV22E46hEe6kb4niSq1LIw" name="Добавление билета" messageSort="reply" receiveEvent="_TV22GI6hEe6kb4niSq1LIw" sendEvent="_TV22Fo6hEe6kb4niSq1LIw"/>
+    <message xmi:id="_b_TYII6hEe6kb4niSq1LIw" name="Редактирование деталей билета" receiveEvent="_b_TYJI6hEe6kb4niSq1LIw" sendEvent="_b_TYI46hEe6kb4niSq1LIw" signature="_b_SxEI6hEe6kb4niSq1LIw"/>
+    <message xmi:id="_b_TYIo6hEe6kb4niSq1LIw" name="Редактирование деталей билета" messageSort="reply" receiveEvent="_b_TYJ46hEe6kb4niSq1LIw" sendEvent="_b_TYJY6hEe6kb4niSq1LIw"/>
+    <message xmi:id="_kbNNcY6hEe6kb4niSq1LIw" name="Удаление билета" receiveEvent="_kbN0g46hEe6kb4niSq1LIw" sendEvent="_kbN0go6hEe6kb4niSq1LIw" signature="_kbNNcI6hEe6kb4niSq1LIw"/>
+    <message xmi:id="_kbN0gY6hEe6kb4niSq1LIw" name="Удаление билета" messageSort="reply" receiveEvent="_kbN0ho6hEe6kb4niSq1LIw" sendEvent="_kbN0hI6hEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_-Z9OcI6hEe6kb4niSq1LIw" name="Покупка билета на кассе">
+    <ownedAttribute xmi:id="_DEY9QI6iEe6kb4niSq1LIw" name="Клиент" type="_9lIxMFjpEe6tB_ecadr44w"/>
+    <ownedAttribute xmi:id="_GxDcQI6iEe6kb4niSq1LIw" name="Покупка билета на кассе" type="_FIL20IUnEe6hDKKFIp5ekw"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Jns5Qo6iEe6kb4niSq1LIw" name="Operation_1"/>
+    <lifeline xmi:id="_DEY9QY6iEe6kb4niSq1LIw" name="Клиент" represents="_DEY9QI6iEe6kb4niSq1LIw" coveredBy="_Jns5RI6iEe6kb4niSq1LIw _Jns5SI6iEe6kb4niSq1LIw"/>
+    <lifeline xmi:id="_GxDcQY6iEe6kb4niSq1LIw" name="Покупка билета на кассе" represents="_GxDcQI6iEe6kb4niSq1LIw" coveredBy="_Jns5RY6iEe6kb4niSq1LIw _Jns5R46iEe6kb4niSq1LIw _Jns5Ro6iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Jns5RI6iEe6kb4niSq1LIw" name="Operation_1_sender" covered="_DEY9QY6iEe6kb4niSq1LIw" message="_Jns5QY6iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Jns5RY6iEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_GxDcQY6iEe6kb4niSq1LIw" message="_Jns5QY6iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Jns5R46iEe6kb4niSq1LIw" name="Покупка билета на кассе" covered="_GxDcQY6iEe6kb4niSq1LIw" finish="_Jns5Ro6iEe6kb4niSq1LIw" start="_Jns5RY6iEe6kb4niSq1LIw" behavior="_Jns5Qo6iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Jns5Ro6iEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_GxDcQY6iEe6kb4niSq1LIw" message="_Jns5Q46iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Jns5SI6iEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_DEY9QY6iEe6kb4niSq1LIw" message="_Jns5Q46iEe6kb4niSq1LIw"/>
+    <message xmi:id="_Jns5QY6iEe6kb4niSq1LIw" name="Покупка билета на кассе" receiveEvent="_Jns5RY6iEe6kb4niSq1LIw" sendEvent="_Jns5RI6iEe6kb4niSq1LIw" signature="_Jns5QI6iEe6kb4niSq1LIw"/>
+    <message xmi:id="_Jns5Q46iEe6kb4niSq1LIw" name="Покупка билета на кассе" messageSort="reply" receiveEvent="_Jns5SI6iEe6kb4niSq1LIw" sendEvent="_Jns5Ro6iEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_fP3UgI6iEe6kb4niSq1LIw" name="Проверка документов">
+    <ownedAttribute xmi:id="_jBpkEI6iEe6kb4niSq1LIw" name="Кассир" type="_xeAK0FjqEe6tB_ecadr44w"/>
+    <ownedAttribute xmi:id="_j4oPYI6iEe6kb4niSq1LIw" name="Проверка документов" type="_0_lCQIUrEe6hDKKFIp5ekw"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_kwV6go6iEe6kb4niSq1LIw" name="Operation_1"/>
+    <lifeline xmi:id="_jBpkEY6iEe6kb4niSq1LIw" name="Кассир" represents="_jBpkEI6iEe6kb4niSq1LIw" coveredBy="_kwV6hI6iEe6kb4niSq1LIw _kwV6iI6iEe6kb4niSq1LIw"/>
+    <lifeline xmi:id="_j4oPYY6iEe6kb4niSq1LIw" name="Проверка документов" represents="_j4oPYI6iEe6kb4niSq1LIw" coveredBy="_kwV6hY6iEe6kb4niSq1LIw _kwV6h46iEe6kb4niSq1LIw _kwV6ho6iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kwV6hI6iEe6kb4niSq1LIw" name="Operation_1_sender" covered="_jBpkEY6iEe6kb4niSq1LIw" message="_kwV6gY6iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kwV6hY6iEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_j4oPYY6iEe6kb4niSq1LIw" message="_kwV6gY6iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_kwV6h46iEe6kb4niSq1LIw" name="Проверка документов" covered="_j4oPYY6iEe6kb4niSq1LIw" finish="_kwV6ho6iEe6kb4niSq1LIw" start="_kwV6hY6iEe6kb4niSq1LIw" behavior="_kwV6go6iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kwV6ho6iEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_j4oPYY6iEe6kb4niSq1LIw" message="_kwV6g46iEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_kwV6iI6iEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_jBpkEY6iEe6kb4niSq1LIw" message="_kwV6g46iEe6kb4niSq1LIw"/>
+    <message xmi:id="_kwV6gY6iEe6kb4niSq1LIw" name="Проверка документов" receiveEvent="_kwV6hY6iEe6kb4niSq1LIw" sendEvent="_kwV6hI6iEe6kb4niSq1LIw" signature="_kwV6gI6iEe6kb4niSq1LIw"/>
+    <message xmi:id="_kwV6g46iEe6kb4niSq1LIw" name="Проверка документов" messageSort="reply" receiveEvent="_kwV6iI6iEe6kb4niSq1LIw" sendEvent="_kwV6ho6iEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_6Qvg4I6iEe6kb4niSq1LIw" name="Покупка билета на сайте">
+    <ownedAttribute xmi:id="_92VHgI6iEe6kb4niSq1LIw" name="Клиент" type="_9lIxMFjpEe6tB_ecadr44w"/>
+    <ownedAttribute xmi:id="_Cgo6gI6jEe6kb4niSq1LIw" name="Покупка билета на сайте" type="_mJtzYI4BEe6kb4niSq1LIw"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Ew0NYo6jEe6kb4niSq1LIw" name="Operation_1"/>
+    <lifeline xmi:id="_92VHgY6iEe6kb4niSq1LIw" name="Клиент" represents="_92VHgI6iEe6kb4niSq1LIw" coveredBy="_Ew0NZI6jEe6kb4niSq1LIw _Ew0NaI6jEe6kb4niSq1LIw"/>
+    <lifeline xmi:id="_Cgo6gY6jEe6kb4niSq1LIw" name="Покупка билета на сайте" represents="_Cgo6gI6jEe6kb4niSq1LIw" coveredBy="_Ew0NZY6jEe6kb4niSq1LIw _Ew0NZ46jEe6kb4niSq1LIw _Ew0NZo6jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ew0NZI6jEe6kb4niSq1LIw" name="Operation_1_sender" covered="_92VHgY6iEe6kb4niSq1LIw" message="_Ew0NYY6jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ew0NZY6jEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_Cgo6gY6jEe6kb4niSq1LIw" message="_Ew0NYY6jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Ew0NZ46jEe6kb4niSq1LIw" name="Покупка билета на сайте" covered="_Cgo6gY6jEe6kb4niSq1LIw" finish="_Ew0NZo6jEe6kb4niSq1LIw" start="_Ew0NZY6jEe6kb4niSq1LIw" behavior="_Ew0NYo6jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ew0NZo6jEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_Cgo6gY6jEe6kb4niSq1LIw" message="_Ew0NY46jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Ew0NaI6jEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_92VHgY6iEe6kb4niSq1LIw" message="_Ew0NY46jEe6kb4niSq1LIw"/>
+    <message xmi:id="_Ew0NYY6jEe6kb4niSq1LIw" name="Покупка билета на сайте" receiveEvent="_Ew0NZY6jEe6kb4niSq1LIw" sendEvent="_Ew0NZI6jEe6kb4niSq1LIw" signature="_Ew0NYI6jEe6kb4niSq1LIw"/>
+    <message xmi:id="_Ew0NY46jEe6kb4niSq1LIw" name="Покупка билета на сайте" messageSort="reply" receiveEvent="_Ew0NaI6jEe6kb4niSq1LIw" sendEvent="_Ew0NZo6jEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_JxWIAI6jEe6kb4niSq1LIw" name="Возврат билета на сайте">
+    <ownedAttribute xmi:id="_TQIWoI6jEe6kb4niSq1LIw" name="Клиент" type="_9lIxMFjpEe6tB_ecadr44w"/>
+    <ownedAttribute xmi:id="_VXcocI6jEe6kb4niSq1LIw" name="Возврат билета на сайте" type="_SmnWcI4dEe6kb4niSq1LIw"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_YYVmko6jEe6kb4niSq1LIw" name="Operation_1"/>
+    <lifeline xmi:id="_TQIWoY6jEe6kb4niSq1LIw" name="Клиент" represents="_TQIWoI6jEe6kb4niSq1LIw" coveredBy="_YYVmlI6jEe6kb4niSq1LIw _YYVmmI6jEe6kb4niSq1LIw"/>
+    <lifeline xmi:id="_VXcocY6jEe6kb4niSq1LIw" name="Возврат билета на сайте" represents="_VXcocI6jEe6kb4niSq1LIw" coveredBy="_YYVmlY6jEe6kb4niSq1LIw _YYVml46jEe6kb4niSq1LIw _YYVmlo6jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YYVmlI6jEe6kb4niSq1LIw" name="Operation_1_sender" covered="_TQIWoY6jEe6kb4niSq1LIw" message="_YYVmkY6jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YYVmlY6jEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_VXcocY6jEe6kb4niSq1LIw" message="_YYVmkY6jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_YYVml46jEe6kb4niSq1LIw" name="Возврат билета на сайте" covered="_VXcocY6jEe6kb4niSq1LIw" finish="_YYVmlo6jEe6kb4niSq1LIw" start="_YYVmlY6jEe6kb4niSq1LIw" behavior="_YYVmko6jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YYVmlo6jEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_VXcocY6jEe6kb4niSq1LIw" message="_YYVmk46jEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_YYVmmI6jEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_TQIWoY6jEe6kb4niSq1LIw" message="_YYVmk46jEe6kb4niSq1LIw"/>
+    <message xmi:id="_YYVmkY6jEe6kb4niSq1LIw" name="Возврат билета на сайте" receiveEvent="_YYVmlY6jEe6kb4niSq1LIw" sendEvent="_YYVmlI6jEe6kb4niSq1LIw" signature="_YYVmkI6jEe6kb4niSq1LIw"/>
+    <message xmi:id="_YYVmk46jEe6kb4niSq1LIw" name="Возврат билета на сайте" messageSort="reply" receiveEvent="_YYVmmI6jEe6kb4niSq1LIw" sendEvent="_YYVmlo6jEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_M6j-4I6nEe6kb4niSq1LIw" name="Возврат билета на кассе">
+    <ownedAttribute xmi:id="_jSiGcI6nEe6kb4niSq1LIw" name="Клиент" type="_9lIxMFjpEe6tB_ecadr44w"/>
+    <ownedAttribute xmi:id="_luGJ8I6nEe6kb4niSq1LIw" name="Возврат билета на кассе" type="_0FSGoI4SEe6kb4niSq1LIw"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_sL1pco6nEe6kb4niSq1LIw" name="Operation_1"/>
+    <ownedBehavior xmi:type="uml:Interaction" xmi:id="_E3kt8I6pEe6kb4niSq1LIw" name="Возврат билета на кассе">
+      <ownedAttribute xmi:id="_E3kt8Y6pEe6kb4niSq1LIw" name="Клиент" type="_9lIxMFjpEe6tB_ecadr44w"/>
+      <ownedAttribute xmi:id="_E3kt8o6pEe6kb4niSq1LIw" name="Возврат билета на кассе" type="_0FSGoI4SEe6kb4niSq1LIw"/>
+      <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_E3kt846pEe6kb4niSq1LIw" name="Operation_1"/>
+      <lifeline xmi:id="_E3kt9I6pEe6kb4niSq1LIw" name="Клиент" represents="_E3kt8Y6pEe6kb4niSq1LIw" coveredBy="_E3kt9o6pEe6kb4niSq1LIw _E3kt-o6pEe6kb4niSq1LIw"/>
+      <lifeline xmi:id="_E3kt9Y6pEe6kb4niSq1LIw" name="Возврат билета на кассе" represents="_E3kt8o6pEe6kb4niSq1LIw" coveredBy="_E3kt946pEe6kb4niSq1LIw _E3kt-I6pEe6kb4niSq1LIw _E3kt-Y6pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_E3kt9o6pEe6kb4niSq1LIw" name="Operation_1_sender" covered="_E3kt9I6pEe6kb4niSq1LIw" message="_E3kt-46pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_E3kt946pEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_E3kt9Y6pEe6kb4niSq1LIw" message="_E3kt-46pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_E3kt-I6pEe6kb4niSq1LIw" name="Возврат билета на кассе" covered="_E3kt9Y6pEe6kb4niSq1LIw" finish="_E3kt-Y6pEe6kb4niSq1LIw" start="_E3kt946pEe6kb4niSq1LIw" behavior="_E3kt846pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_E3kt-Y6pEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_E3kt9Y6pEe6kb4niSq1LIw" message="_E3kt_I6pEe6kb4niSq1LIw"/>
+      <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_E3kt-o6pEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_E3kt9I6pEe6kb4niSq1LIw" message="_E3kt_I6pEe6kb4niSq1LIw"/>
+      <message xmi:id="_E3kt-46pEe6kb4niSq1LIw" name="Возврат билета на кассе" receiveEvent="_E3kt946pEe6kb4niSq1LIw" sendEvent="_E3kt9o6pEe6kb4niSq1LIw" signature="_sL1pcI6nEe6kb4niSq1LIw"/>
+      <message xmi:id="_E3kt_I6pEe6kb4niSq1LIw" name="Возврат билета на кассе" messageSort="reply" receiveEvent="_E3kt-o6pEe6kb4niSq1LIw" sendEvent="_E3kt-Y6pEe6kb4niSq1LIw"/>
+    </ownedBehavior>
+    <lifeline xmi:id="_jSiGcY6nEe6kb4niSq1LIw" name="Клиент" represents="_jSiGcI6nEe6kb4niSq1LIw" coveredBy="_sL1pdI6nEe6kb4niSq1LIw _sL1peI6nEe6kb4niSq1LIw"/>
+    <lifeline xmi:id="_luGJ8Y6nEe6kb4niSq1LIw" name="Возврат билета на кассе" represents="_luGJ8I6nEe6kb4niSq1LIw" coveredBy="_sL1pdY6nEe6kb4niSq1LIw _sL1pd46nEe6kb4niSq1LIw _sL1pdo6nEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sL1pdI6nEe6kb4niSq1LIw" name="Operation_1_sender" covered="_jSiGcY6nEe6kb4niSq1LIw" message="_sL1pcY6nEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sL1pdY6nEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_luGJ8Y6nEe6kb4niSq1LIw" message="_sL1pcY6nEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_sL1pd46nEe6kb4niSq1LIw" name="Возврат билета на кассе" covered="_luGJ8Y6nEe6kb4niSq1LIw" finish="_sL1pdo6nEe6kb4niSq1LIw" start="_sL1pdY6nEe6kb4niSq1LIw" behavior="_sL1pco6nEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sL1pdo6nEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_luGJ8Y6nEe6kb4niSq1LIw" message="_sL1pc46nEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_sL1peI6nEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_jSiGcY6nEe6kb4niSq1LIw" message="_sL1pc46nEe6kb4niSq1LIw"/>
+    <message xmi:id="_sL1pcY6nEe6kb4niSq1LIw" name="Возврат билета на кассе" receiveEvent="_sL1pdY6nEe6kb4niSq1LIw" sendEvent="_sL1pdI6nEe6kb4niSq1LIw" signature="_sL1pcI6nEe6kb4niSq1LIw"/>
+    <message xmi:id="_sL1pc46nEe6kb4niSq1LIw" name="Возврат билета на кассе" messageSort="reply" receiveEvent="_sL1peI6nEe6kb4niSq1LIw" sendEvent="_sL1pdo6nEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_fivwEI6pEe6kb4niSq1LIw" name="Подсчет дневной выручки" node="_xs7BgI6pEe6kb4niSq1LIw _OC5_oI6qEe6kb4niSq1LIw _U2qLYI6qEe6kb4niSq1LIw _eShB0I6qEe6kb4niSq1LIw">
+    <ownedOperation xmi:id="_0EmOEI6qEe6kb4niSq1LIw" name="Operation_1"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_gG37YI6qEe6kb4niSq1LIw" target="_OC5_oI6qEe6kb4niSq1LIw" source="_xs7BgI6pEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_gG37YY6qEe6kb4niSq1LIw" name="_To_Кассир суммирует все получанные с продажи деньги_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_gG37Yo6qEe6kb4niSq1LIw" name="_To_Кассир суммирует все получанные с продажи деньги_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_gfJ4gI6qEe6kb4niSq1LIw" target="_U2qLYI6qEe6kb4niSq1LIw" source="_OC5_oI6qEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_gfJ4gY6qEe6kb4niSq1LIw" name="Кассир суммирует все получанные с продажи деньги_To_Кассир фиксирует результат для отчета_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_gfJ4go6qEe6kb4niSq1LIw" name="Кассир суммирует все получанные с продажи деньги_To_Кассир фиксирует результат для отчета_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_g8ZOII6qEe6kb4niSq1LIw" target="_eShB0I6qEe6kb4niSq1LIw" source="_U2qLYI6qEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_g8ZOIY6qEe6kb4niSq1LIw" name="Кассир фиксирует результат для отчета_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_g8ZOIo6qEe6kb4niSq1LIw" name="Кассир фиксирует результат для отчета_To__weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_xs7BgI6pEe6kb4niSq1LIw" name="" outgoing="_gG37YI6qEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_OC5_oI6qEe6kb4niSq1LIw" name="Кассир суммирует все получанные с продажи деньги" incoming="_gG37YI6qEe6kb4niSq1LIw" outgoing="_gfJ4gI6qEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction1</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_U2qLYI6qEe6kb4niSq1LIw" name="Кассир фиксирует результат для отчета" incoming="_gfJ4gI6qEe6kb4niSq1LIw" outgoing="_g8ZOII6qEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction2</body>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_eShB0I6qEe6kb4niSq1LIw" name="" incoming="_g8ZOII6qEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_tDHvYI6qEe6kb4niSq1LIw" name="Подсчет дневной выручки">
+    <ownedAttribute xmi:id="_v7RoQI6qEe6kb4niSq1LIw" name="Кассир" type="_xeAK0FjqEe6tB_ecadr44w"/>
+    <ownedAttribute xmi:id="_xbk9YI6qEe6kb4niSq1LIw" name="Подсчет дневной выручки" type="_fivwEI6pEe6kb4niSq1LIw"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_0Em1IY6qEe6kb4niSq1LIw" name="Operation_1"/>
+    <lifeline xmi:id="_v7RoQY6qEe6kb4niSq1LIw" name="Кассир" represents="_v7RoQI6qEe6kb4niSq1LIw" coveredBy="_0Em1I46qEe6kb4niSq1LIw _0Em1J46qEe6kb4niSq1LIw"/>
+    <lifeline xmi:id="_xbk9YY6qEe6kb4niSq1LIw" name="Подсчет дневной выручки" represents="_xbk9YI6qEe6kb4niSq1LIw" coveredBy="_0Em1JI6qEe6kb4niSq1LIw _0Em1Jo6qEe6kb4niSq1LIw _0Em1JY6qEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0Em1I46qEe6kb4niSq1LIw" name="Operation_1_sender" covered="_v7RoQY6qEe6kb4niSq1LIw" message="_0Em1II6qEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0Em1JI6qEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_xbk9YY6qEe6kb4niSq1LIw" message="_0Em1II6qEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_0Em1Jo6qEe6kb4niSq1LIw" name="Подсчет дневной выручки" covered="_xbk9YY6qEe6kb4niSq1LIw" finish="_0Em1JY6qEe6kb4niSq1LIw" start="_0Em1JI6qEe6kb4niSq1LIw" behavior="_0Em1IY6qEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0Em1JY6qEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_xbk9YY6qEe6kb4niSq1LIw" message="_0Em1Io6qEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_0Em1J46qEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_v7RoQY6qEe6kb4niSq1LIw" message="_0Em1Io6qEe6kb4niSq1LIw"/>
+    <message xmi:id="_0Em1II6qEe6kb4niSq1LIw" name="Подсчет дневной выручки" receiveEvent="_0Em1JI6qEe6kb4niSq1LIw" sendEvent="_0Em1I46qEe6kb4niSq1LIw" signature="_0EmOEI6qEe6kb4niSq1LIw"/>
+    <message xmi:id="_0Em1Io6qEe6kb4niSq1LIw" name="Подсчет дневной выручки" messageSort="reply" receiveEvent="_0Em1J46qEe6kb4niSq1LIw" sendEvent="_0Em1JY6qEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ICzcII9fEe6kb4niSq1LIw" name="AirSystem">
+    <packagedElement xmi:type="uml:Usage" xmi:id="_PHLoYI9gEe6kb4niSq1LIw" client="_ICzcII9fEe6kb4niSq1LIw" supplier="_aLPoMI9fEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_aLPoMI9fEe6kb4niSq1LIw" name="Entities">
+    <packagedElement xmi:type="uml:Package" xmi:id="_qzOHEI9fEe6kb4niSq1LIw" name="Administrator"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_gTZ5QI9fEe6kb4niSq1LIw" name="Client"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_lWuCII9fEe6kb4niSq1LIw" name="Cashier"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_mkp04I9fEe6kb4niSq1LIw" name="Ticket"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_-l04cI9rEe6kb4niSq1LIw" client="_aLPoMI9fEe6kb4niSq1LIw" supplier="_TiKl8I9gEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_TiKl8I9gEe6kb4niSq1LIw" name="Actions">
+    <packagedElement xmi:type="uml:Package" xmi:id="__Xj3YI9rEe6kb4niSq1LIw" name="Authentification"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_G_BYAI9sEe6kb4niSq1LIw" name="Payment system"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_EMSKoI9sEe6kb4niSq1LIw" name="TicketManagment"/>
+    <packagedElement xmi:type="uml:Usage" xmi:id="_dMijEI9sEe6kb4niSq1LIw" client="_TiKl8I9gEe6kb4niSq1LIw" supplier="_ZK3dYI9sEe6kb4niSq1LIw"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_lLU3YI-UEe6kb4niSq1LIw" name="UserManagment"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Package" xmi:id="_ZK3dYI9sEe6kb4niSq1LIw" name="Resources">
+    <packagedElement xmi:type="uml:Package" xmi:id="_go4HEI9sEe6kb4niSq1LIw" name="CSS"/>
+    <packagedElement xmi:type="uml:Package" xmi:id="_e24lAI9sEe6kb4niSq1LIw" name="HTML"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_qtvKUI-EEe6kb4niSq1LIw" name="Администратор">
+    <region xmi:id="_tPgjgI-EEe6kb4niSq1LIw" name="Region1">
+      <transition xmi:id="_hEtYkI-aEe6kb4niSq1LIw" source="_BHWQoI-FEe6kb4niSq1LIw" target="_m6xZkI-FEe6kb4niSq1LIw"/>
+      <transition xmi:id="_iLmIII-aEe6kb4niSq1LIw" source="_m6xZkI-FEe6kb4niSq1LIw" target="_vJfqUI-MEe6kb4niSq1LIw">
+        <trigger xmi:id="_aT7y4I-bEe6kb4niSq1LIw" name="Связь с базой данных"/>
+      </transition>
+      <transition xmi:id="_jVERoI-aEe6kb4niSq1LIw" source="_vJfqUI-MEe6kb4niSq1LIw" target="_0OSZ4I-MEe6kb4niSq1LIw">
+        <trigger xmi:id="_nBEM0I-bEe6kb4niSq1LIw" name="Управление пользователями"/>
+      </transition>
+      <transition xmi:id="_lPLN4I-aEe6kb4niSq1LIw" source="_vJfqUI-MEe6kb4niSq1LIw" target="_924wAI-FEe6kb4niSq1LIw">
+        <trigger xmi:id="_qUjW0I-bEe6kb4niSq1LIw" name="Управление списком билетов"/>
+      </transition>
+      <transition xmi:id="_is6akI-cEe6kb4niSq1LIw" source="_5IivkI-bEe6kb4niSq1LIw" target="_97_QcI-bEe6kb4niSq1LIw">
+        <trigger xmi:id="_rkKIEI-cEe6kb4niSq1LIw" name="Добавить нового кассира"/>
+      </transition>
+      <transition xmi:id="_jh8lII-cEe6kb4niSq1LIw" source="_5IivkI-bEe6kb4niSq1LIw" target="_WFx68I-cEe6kb4niSq1LIw">
+        <trigger xmi:id="_nUDk0I-cEe6kb4niSq1LIw" name="Удалить выбранный аккаунт клиента или кассира"/>
+      </transition>
+      <transition xmi:id="_QARtkI-iEe6kb4niSq1LIw" source="_924wAI-FEe6kb4niSq1LIw" target="_7XvyEI-bEe6kb4niSq1LIw"/>
+      <transition xmi:id="_RG-28I-iEe6kb4niSq1LIw" source="_7XvyEI-bEe6kb4niSq1LIw" target="_udbecI-gEe6kb4niSq1LIw">
+        <trigger xmi:id="_mMROoI-iEe6kb4niSq1LIw" name="Создание"/>
+      </transition>
+      <transition xmi:id="_SDFS0I-iEe6kb4niSq1LIw" source="_7XvyEI-bEe6kb4niSq1LIw" target="_MhJwwI-hEe6kb4niSq1LIw">
+        <trigger xmi:id="_prbdII-iEe6kb4niSq1LIw" name="Удаление"/>
+      </transition>
+      <transition xmi:id="_S6JdsI-iEe6kb4niSq1LIw" source="_7XvyEI-bEe6kb4niSq1LIw" target="_8h_lYI-gEe6kb4niSq1LIw">
+        <trigger xmi:id="_omdZII-iEe6kb4niSq1LIw" name="Изменение"/>
+      </transition>
+      <transition xmi:id="_Way58I-iEe6kb4niSq1LIw" source="_0OSZ4I-MEe6kb4niSq1LIw" target="_5IivkI-bEe6kb4niSq1LIw"/>
+      <transition xmi:id="_XBHTEI-iEe6kb4niSq1LIw" source="_97_QcI-bEe6kb4niSq1LIw" target="_rDwXcI-hEe6kb4niSq1LIw">
+        <trigger xmi:id="_jct4II-iEe6kb4niSq1LIw" name="Передача данных"/>
+      </transition>
+      <transition xmi:id="_Zo9fEI-iEe6kb4niSq1LIw" source="_udbecI-gEe6kb4niSq1LIw" target="_rDwXcI-hEe6kb4niSq1LIw"/>
+      <transition xmi:id="_bFWkkI-iEe6kb4niSq1LIw" source="_8h_lYI-gEe6kb4niSq1LIw" target="_rDwXcI-hEe6kb4niSq1LIw"/>
+      <transition xmi:id="_duOrUI-iEe6kb4niSq1LIw" source="_MhJwwI-hEe6kb4niSq1LIw" target="_rDwXcI-hEe6kb4niSq1LIw"/>
+      <transition xmi:id="_tQT5II-iEe6kb4niSq1LIw" source="_rDwXcI-hEe6kb4niSq1LIw" target="_gHUpoI-iEe6kb4niSq1LIw">
+        <trigger xmi:id="_qm2HEI-jEe6kb4niSq1LIw" name="Завершение взаимодействия с базой данных"/>
+      </transition>
+      <transition xmi:id="_759NoI-jEe6kb4niSq1LIw" source="_7XvyEI-bEe6kb4niSq1LIw" target="_rDwXcI-hEe6kb4niSq1LIw"/>
+      <transition xmi:id="_AXtyYI-kEe6kb4niSq1LIw" source="_5IivkI-bEe6kb4niSq1LIw" target="_rDwXcI-hEe6kb4niSq1LIw">
+        <trigger xmi:id="_GbAxkI-kEe6kb4niSq1LIw" name="Оставить без изменения"/>
+      </transition>
+      <transition xmi:id="_PKWgQI-kEe6kb4niSq1LIw" source="_rDwXcI-hEe6kb4niSq1LIw" target="_vJfqUI-MEe6kb4niSq1LIw">
+        <trigger xmi:id="_emyZEI-kEe6kb4niSq1LIw" name="Продолжение взаимодействия с базой данных"/>
+      </transition>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_BHWQoI-FEe6kb4niSq1LIw" name=""/>
+      <subvertex xmi:type="uml:State" xmi:id="_m6xZkI-FEe6kb4niSq1LIw" name="Авторизация">
+        <entry xmi:type="uml:Activity" xmi:id="_qfBjcI-FEe6kb4niSq1LIw" name="Вход в систему"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_924wAI-FEe6kb4niSq1LIw" name="Управление списком билетов">
+        <doActivity xmi:type="uml:Activity" xmi:id="_E-4tcI-GEe6kb4niSq1LIw" name="Выбор взаимодествия с базой билетов"/>
+      </subvertex>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_vJfqUI-MEe6kb4niSq1LIw" name="" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_0OSZ4I-MEe6kb4niSq1LIw" name="Управление базой пользователей">
+        <doActivity xmi:type="uml:Activity" xmi:id="_Su-CEI-aEe6kb4niSq1LIw" name="Выбор взаимодествия с базой пользователей"/>
+      </subvertex>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_5IivkI-bEe6kb4niSq1LIw" name="" kind="choice"/>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_7XvyEI-bEe6kb4niSq1LIw" name="" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_97_QcI-bEe6kb4niSq1LIw" name="Создание аккаунта кассира">
+        <doActivity xmi:type="uml:Activity" xmi:id="_RzipsI-cEe6kb4niSq1LIw" name="Добавление нового кассира"/>
+        <entry xmi:type="uml:Activity" xmi:id="_G0RfwI-cEe6kb4niSq1LIw" name="Ввод информации о новом аккаунте"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_WFx68I-cEe6kb4niSq1LIw" name="Удаление аккаунта">
+        <doActivity xmi:type="uml:Activity" xmi:id="_bYz60I-cEe6kb4niSq1LIw" name="Удаление аккаунта из базы"/>
+        <entry xmi:type="uml:Activity" xmi:id="_oDYzMI-gEe6kb4niSq1LIw" name="Поиск аккаунта"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_udbecI-gEe6kb4niSq1LIw" name="Добавление билета">
+        <doActivity xmi:type="uml:Activity" xmi:id="_1lwzEI-gEe6kb4niSq1LIw" name="Добавление билета"/>
+        <entry xmi:type="uml:Activity" xmi:id="_xHOyQI-gEe6kb4niSq1LIw" name="Ввод информации о новом билете"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_8h_lYI-gEe6kb4niSq1LIw" name="Изменение данных билета">
+        <doActivity xmi:type="uml:Activity" xmi:id="_Duj5wI-hEe6kb4niSq1LIw" name="Изменение билета"/>
+        <entry xmi:type="uml:Activity" xmi:id="_ACYi8I-hEe6kb4niSq1LIw" name="Ввод новых данных билета"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_MhJwwI-hEe6kb4niSq1LIw" name="Удаление билета">
+        <doActivity xmi:type="uml:Activity" xmi:id="_UDx0sI-hEe6kb4niSq1LIw" name="Удаление билета"/>
+        <entry xmi:type="uml:Activity" xmi:id="_SYU_gI-hEe6kb4niSq1LIw" name="Выбор билета"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_rDwXcI-hEe6kb4niSq1LIw" name="Обновление базы данных">
+        <entry xmi:type="uml:Activity" xmi:id="_7KdVQI-hEe6kb4niSq1LIw" name="Изменение и сохранение информации в базе данных"/>
+      </subvertex>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_gHUpoI-iEe6kb4niSq1LIw" name=""/>
+    </region>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_A6wFcI-NEe6kb4niSq1LIw" name="&lt;Control> Управление базой пользователей" visibility="public">
+    <ownedOperation xmi:id="_V76yII-NEe6kb4niSq1LIw" name="Создание аккаунта кассира" visibility="protected"/>
+    <ownedOperation xmi:id="_a9IpQI-NEe6kb4niSq1LIw" name="Удаление аккаунта кассира" visibility="protected"/>
+    <ownedOperation xmi:id="_xOd9UI-NEe6kb4niSq1LIw" name="Удаление аккаунта клиента" visibility="protected"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_eLW4wI-NEe6kb4niSq1LIw" memberEnd="_eLW4wY-NEe6kb4niSq1LIw _eLW4xI-NEe6kb4niSq1LIw" navigableOwnedEnd="_eLW4wY-NEe6kb4niSq1LIw _eLW4xI-NEe6kb4niSq1LIw">
+    <ownedEnd xmi:id="_eLW4wY-NEe6kb4niSq1LIw" name="&lt;Entity> Администраторs" type="_kQb-8IR8Ee6L8-zQAw4yUA" association="_eLW4wI-NEe6kb4niSq1LIw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eLW4wo-NEe6kb4niSq1LIw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eLW4w4-NEe6kb4niSq1LIw" value="*"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_eLW4xI-NEe6kb4niSq1LIw" name="&lt;Control> Управление базой пользователейs" type="_A6wFcI-NEe6kb4niSq1LIw" association="_eLW4wI-NEe6kb4niSq1LIw">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_eLW4xY-NEe6kb4niSq1LIw"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_eLW4xo-NEe6kb4niSq1LIw" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_fa5YkI-OEe6kb4niSq1LIw" name="Управление базой пользователей" node="_hZ-UYI-OEe6kb4niSq1LIw _i98BgI-OEe6kb4niSq1LIw _zK_XkI-REe6kb4niSq1LIw _8Ed5sI-REe6kb4niSq1LIw __i69kI-REe6kb4niSq1LIw _KHwOQI-SEe6kb4niSq1LIw _VkFusI-SEe6kb4niSq1LIw _eHw_8I-SEe6kb4niSq1LIw _HLD-MI-TEe6kb4niSq1LIw _MlbVII-TEe6kb4niSq1LIw">
+    <ownedOperation xmi:id="_NWRt0I-UEe6kb4niSq1LIw" name="Operation_1"/>
+    <ownedOperation xmi:id="_Xd-9oI-UEe6kb4niSq1LIw" name="Operation_2"/>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_2D_lAI-REe6kb4niSq1LIw" target="_i98BgI-OEe6kb4niSq1LIw" source="_hZ-UYI-OEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_2D_lAY-REe6kb4niSq1LIw" name="_To_Администратор вводит ID пользователя_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_2EAMEI-REe6kb4niSq1LIw" name="_To_Администратор вводит ID пользователя_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_3GlDYI-REe6kb4niSq1LIw" target="_zK_XkI-REe6kb4niSq1LIw" source="_i98BgI-OEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_3GlDYY-REe6kb4niSq1LIw" name="Администратор вводит ID пользователя_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_3GlDYo-REe6kb4niSq1LIw" name="Администратор вводит ID пользователя_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_GAv8oI-SEe6kb4niSq1LIw" name="ID есть в базе" target="_KHwOQI-SEe6kb4niSq1LIw" source="_zK_XkI-REe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_hbgBkI-SEe6kb4niSq1LIw" name="null_guard">
+        <body>ID есть в базе</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_GAwjsI-SEe6kb4niSq1LIw" name="_To_Удалить аккаунт_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_Yo5jgI-SEe6kb4niSq1LIw" name="ID нет в базе" target="_VkFusI-SEe6kb4niSq1LIw" source="_zK_XkI-REe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_jBWlEI-SEe6kb4niSq1LIw" name="null_guard">
+        <body>ID нет в базе</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_Yo5jgo-SEe6kb4niSq1LIw" name="_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_sLhOkI-SEe6kb4niSq1LIw" name="Создать аккаунт кассира" target="_8Ed5sI-REe6kb4niSq1LIw" source="_VkFusI-SEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_x40IkI-SEe6kb4niSq1LIw" name="null_guard">
+        <body>Создать аккаунт кассира</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_sLhOko-SEe6kb4niSq1LIw" name="_To_Администратор создаёт аккаунт кассира_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_z67xUI-SEe6kb4niSq1LIw" name="Не удалять аккаунт" target="_eHw_8I-SEe6kb4niSq1LIw" source="_KHwOQI-SEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_FFrmEI-TEe6kb4niSq1LIw" name="null_guard">
+        <body>Не удалять аккаунт</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_z68YYI-SEe6kb4niSq1LIw" name="_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_26GRII-SEe6kb4niSq1LIw" name="Не создавать аккаунт" target="_eHw_8I-SEe6kb4niSq1LIw" source="_VkFusI-SEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_C_3JEI-TEe6kb4niSq1LIw" name="null_guard">
+        <body>Не создавать аккаунт</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_26GRIo-SEe6kb4niSq1LIw" name="_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_8t-UQI-SEe6kb4niSq1LIw" target="_eHw_8I-SEe6kb4niSq1LIw" source="__i69kI-REe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_8t-UQY-SEe6kb4niSq1LIw" name="Администратор удаляет аккаунт_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_8t-UQo-SEe6kb4niSq1LIw" name="Администратор удаляет аккаунт_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_9oWR0I-SEe6kb4niSq1LIw" target="_eHw_8I-SEe6kb4niSq1LIw" source="_8Ed5sI-REe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_9oWR0Y-SEe6kb4niSq1LIw" name="Администратор создаёт аккаунт кассира_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_9oW44I-SEe6kb4niSq1LIw" name="Администратор создаёт аккаунт кассира_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_OVIYMI-TEe6kb4niSq1LIw" target="_HLD-MI-TEe6kb4niSq1LIw" source="_eHw_8I-SEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_OVIYMY-TEe6kb4niSq1LIw" name="_To_Завершение взаимодействия с базой пользователей_guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_OVIYMo-TEe6kb4niSq1LIw" name="_To_Завершение взаимодействия с базой пользователей_weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_PLFIwI-TEe6kb4niSq1LIw" target="_MlbVII-TEe6kb4niSq1LIw" source="_HLD-MI-TEe6kb4niSq1LIw">
+      <guard xmi:type="uml:LiteralBoolean" xmi:id="_PLFIwY-TEe6kb4niSq1LIw" name="Завершение взаимодействия с базой пользователей_To__guard" value="true"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_PLFIwo-TEe6kb4niSq1LIw" name="Завершение взаимодействия с базой пользователей_To__weight"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_keAT0I-TEe6kb4niSq1LIw" name="Удалить аккаунт" target="__i69kI-REe6kb4niSq1LIw" source="_KHwOQI-SEe6kb4niSq1LIw">
+      <guard xmi:type="uml:OpaqueExpression" xmi:id="_l4-dAI-TEe6kb4niSq1LIw" name="null_guard">
+        <body>Удалить аккаунт</body>
+      </guard>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_keA64Y-TEe6kb4niSq1LIw" name="_To_Администратор удаляет аккаунт_weight"/>
+    </edge>
+    <node xmi:type="uml:InitialNode" xmi:id="_hZ-UYI-OEe6kb4niSq1LIw" name="" outgoing="_2D_lAI-REe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_i98BgI-OEe6kb4niSq1LIw" name="Администратор вводит ID пользователя" incoming="_2D_lAI-REe6kb4niSq1LIw" outgoing="_3GlDYI-REe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction1</body>
+    </node>
+    <node xmi:type="uml:DecisionNode" xmi:id="_zK_XkI-REe6kb4niSq1LIw" name="" incoming="_3GlDYI-REe6kb4niSq1LIw" outgoing="_GAv8oI-SEe6kb4niSq1LIw _Yo5jgI-SEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_8Ed5sI-REe6kb4niSq1LIw" name="Администратор создаёт аккаунт кассира" incoming="_sLhOkI-SEe6kb4niSq1LIw" outgoing="_9oWR0I-SEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction2</body>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="__i69kI-REe6kb4niSq1LIw" name="Администратор удаляет аккаунт" incoming="_keAT0I-TEe6kb4niSq1LIw" outgoing="_8t-UQI-SEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction3</body>
+    </node>
+    <node xmi:type="uml:DecisionNode" xmi:id="_KHwOQI-SEe6kb4niSq1LIw" name="" incoming="_GAv8oI-SEe6kb4niSq1LIw" outgoing="_z67xUI-SEe6kb4niSq1LIw _keAT0I-TEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:DecisionNode" xmi:id="_VkFusI-SEe6kb4niSq1LIw" name="" incoming="_Yo5jgI-SEe6kb4niSq1LIw" outgoing="_sLhOkI-SEe6kb4niSq1LIw _26GRII-SEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:MergeNode" xmi:id="_eHw_8I-SEe6kb4niSq1LIw" name="" incoming="_z67xUI-SEe6kb4niSq1LIw _26GRII-SEe6kb4niSq1LIw _8t-UQI-SEe6kb4niSq1LIw _9oWR0I-SEe6kb4niSq1LIw" outgoing="_OVIYMI-TEe6kb4niSq1LIw"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_HLD-MI-TEe6kb4niSq1LIw" name="Завершение взаимодействия с базой пользователей" incoming="_OVIYMI-TEe6kb4niSq1LIw" outgoing="_PLFIwI-TEe6kb4niSq1LIw">
+      <body>// TODO body of OpaqueAction4</body>
+    </node>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_MlbVII-TEe6kb4niSq1LIw" name="" incoming="_PLFIwI-TEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_DD6GII-UEe6kb4niSq1LIw" name="Model">
+    <ownedAttribute xmi:id="_IvdTsI-UEe6kb4niSq1LIw" name="Администратор" type="_vuCpEFjqEe6tB_ecadr44w"/>
+    <ownedAttribute xmi:id="_KAbzYI-UEe6kb4niSq1LIw" name="Управление базой пользователей" type="_fa5YkI-OEe6kb4niSq1LIw"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_NWSU4I-UEe6kb4niSq1LIw" name="Operation_1"/>
+    <ownedBehavior xmi:type="uml:OpaqueBehavior" xmi:id="_Xd-9oo-UEe6kb4niSq1LIw" name="Operation_2"/>
+    <lifeline xmi:id="_IvdTsY-UEe6kb4niSq1LIw" name="Администратор" represents="_IvdTsI-UEe6kb4niSq1LIw" coveredBy="_NWSU4o-UEe6kb4niSq1LIw _NWSU5o-UEe6kb4niSq1LIw _Xd-9pI-UEe6kb4niSq1LIw _Xd-9qI-UEe6kb4niSq1LIw"/>
+    <lifeline xmi:id="_KAbzYY-UEe6kb4niSq1LIw" name="Управление базой пользователей" represents="_KAbzYI-UEe6kb4niSq1LIw" coveredBy="_NWSU44-UEe6kb4niSq1LIw _NWSU5Y-UEe6kb4niSq1LIw _NWSU5I-UEe6kb4niSq1LIw _Xd-9pY-UEe6kb4niSq1LIw _Xd-9p4-UEe6kb4niSq1LIw _Xd-9po-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_NWSU4o-UEe6kb4niSq1LIw" name="Operation_1_sender" covered="_IvdTsY-UEe6kb4niSq1LIw" message="_NWRt0Y-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_NWSU44-UEe6kb4niSq1LIw" name="Operation_1_receiver" covered="_KAbzYY-UEe6kb4niSq1LIw" message="_NWRt0Y-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_NWSU5Y-UEe6kb4niSq1LIw" name="Создать аккаунт кассира" covered="_KAbzYY-UEe6kb4niSq1LIw" finish="_NWSU5I-UEe6kb4niSq1LIw" start="_NWSU44-UEe6kb4niSq1LIw" behavior="_NWSU4I-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_NWSU5I-UEe6kb4niSq1LIw" name="Operation_1_reply_sender" covered="_KAbzYY-UEe6kb4niSq1LIw" message="_NWSU4Y-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_NWSU5o-UEe6kb4niSq1LIw" name="Operation_1_reply_receiver" covered="_IvdTsY-UEe6kb4niSq1LIw" message="_NWSU4Y-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Xd-9pI-UEe6kb4niSq1LIw" name="Operation_2_sender" covered="_IvdTsY-UEe6kb4niSq1LIw" message="_Xd-9oY-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Xd-9pY-UEe6kb4niSq1LIw" name="Operation_2_receiver" covered="_KAbzYY-UEe6kb4niSq1LIw" message="_Xd-9oY-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:BehaviorExecutionSpecification" xmi:id="_Xd-9p4-UEe6kb4niSq1LIw" name="Удалить аккаунт" covered="_KAbzYY-UEe6kb4niSq1LIw" finish="_Xd-9po-UEe6kb4niSq1LIw" start="_Xd-9pY-UEe6kb4niSq1LIw" behavior="_Xd-9oo-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Xd-9po-UEe6kb4niSq1LIw" name="Operation_2_reply_sender" covered="_KAbzYY-UEe6kb4niSq1LIw" message="_Xd-9o4-UEe6kb4niSq1LIw"/>
+    <fragment xmi:type="uml:MessageOccurrenceSpecification" xmi:id="_Xd-9qI-UEe6kb4niSq1LIw" name="Operation_2_reply_receiver" covered="_IvdTsY-UEe6kb4niSq1LIw" message="_Xd-9o4-UEe6kb4niSq1LIw"/>
+    <message xmi:id="_NWRt0Y-UEe6kb4niSq1LIw" name="Создать аккаунт кассира" receiveEvent="_NWSU44-UEe6kb4niSq1LIw" sendEvent="_NWSU4o-UEe6kb4niSq1LIw" signature="_NWRt0I-UEe6kb4niSq1LIw"/>
+    <message xmi:id="_NWSU4Y-UEe6kb4niSq1LIw" name="Создать аккаунт кассира" messageSort="reply" receiveEvent="_NWSU5o-UEe6kb4niSq1LIw" sendEvent="_NWSU5I-UEe6kb4niSq1LIw"/>
+    <message xmi:id="_Xd-9oY-UEe6kb4niSq1LIw" name="Удалить аккаунт" receiveEvent="_Xd-9pY-UEe6kb4niSq1LIw" sendEvent="_Xd-9pI-UEe6kb4niSq1LIw" signature="_Xd-9oI-UEe6kb4niSq1LIw"/>
+    <message xmi:id="_Xd-9o4-UEe6kb4niSq1LIw" name="Удалить аккаунт" messageSort="reply" receiveEvent="_Xd-9qI-UEe6kb4niSq1LIw" sendEvent="_Xd-9po-UEe6kb4niSq1LIw"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:StateMachine" xmi:id="_kxrXkI-wEe6kb4niSq1LIw" name="Покупка и возврат билета">
+    <region xmi:id="_m5ZSAY-wEe6kb4niSq1LIw" name="Region1">
+      <transition xmi:id="_JEvuwI-2Ee6kb4niSq1LIw" source="_qhwDUI-xEe6kb4niSq1LIw" target="_sdhzgI-xEe6kb4niSq1LIw"/>
+      <transition xmi:id="_fc0SEI-4Ee6kb4niSq1LIw" source="_sdhzgI-xEe6kb4niSq1LIw" target="_M2rvUI-2Ee6kb4niSq1LIw"/>
+      <transition xmi:id="_gX3lEI-4Ee6kb4niSq1LIw" source="_M2rvUI-2Ee6kb4niSq1LIw" target="_c8ofMI-2Ee6kb4niSq1LIw">
+        <trigger xmi:id="_mHyVQI-4Ee6kb4niSq1LIw" name="Просмотр купленных билетов"/>
+      </transition>
+      <transition xmi:id="_hko6MI-4Ee6kb4niSq1LIw" source="_c8ofMI-2Ee6kb4niSq1LIw" target="_00aMoI-2Ee6kb4niSq1LIw"/>
+      <transition xmi:id="_iaKM8I-4Ee6kb4niSq1LIw" source="_M2rvUI-2Ee6kb4niSq1LIw" target="_LRfdsI-3Ee6kb4niSq1LIw">
+        <trigger xmi:id="_twwRwI-4Ee6kb4niSq1LIw" name="Просмотр расписания рейсов"/>
+      </transition>
+      <transition xmi:id="_x-nZUI-4Ee6kb4niSq1LIw" source="_henAII-3Ee6kb4niSq1LIw" target="_v8H9II-4Ee6kb4niSq1LIw"/>
+      <transition xmi:id="_0LrGwI-4Ee6kb4niSq1LIw" source="_00aMoI-2Ee6kb4niSq1LIw" target="_v8H9II-4Ee6kb4niSq1LIw"/>
+      <transition xmi:id="_6slPAI-4Ee6kb4niSq1LIw" source="_v8H9II-4Ee6kb4niSq1LIw" target="_GmvwYI-4Ee6kb4niSq1LIw">
+        <trigger xmi:id="_9KxvwI-4Ee6kb4niSq1LIw" name="В случае успеха"/>
+      </transition>
+      <transition xmi:id="_-3be0I-4Ee6kb4niSq1LIw" source="_v8H9II-4Ee6kb4niSq1LIw" target="_M2rvUI-2Ee6kb4niSq1LIw">
+        <trigger xmi:id="_CAJjQI-5Ee6kb4niSq1LIw" name="В случае ошибки"/>
+      </transition>
+      <transition xmi:id="_GZ_RUI-5Ee6kb4niSq1LIw" source="_GmvwYI-4Ee6kb4niSq1LIw" target="_EEmHQI-5Ee6kb4niSq1LIw">
+        <trigger xmi:id="_JryZQI-5Ee6kb4niSq1LIw" name="Завершение взаимодействия с расписанием"/>
+      </transition>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_qhwDUI-xEe6kb4niSq1LIw" name=""/>
+      <subvertex xmi:type="uml:State" xmi:id="_sdhzgI-xEe6kb4niSq1LIw" name="Вход на сайт">
+        <doActivity xmi:type="uml:Activity" xmi:id="_GwCeAI-yEe6kb4niSq1LIw" name="Выбор билета для покупки"/>
+        <entry xmi:type="uml:Activity" xmi:id="_FTDioI-yEe6kb4niSq1LIw" name="Поиск доступных и обзор купленных билетов"/>
+      </subvertex>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_M2rvUI-2Ee6kb4niSq1LIw" name="" kind="choice"/>
+      <subvertex xmi:type="uml:State" xmi:id="_c8ofMI-2Ee6kb4niSq1LIw" name="Возврат билета">
+        <doActivity xmi:type="uml:Activity" xmi:id="_s8-9YI-2Ee6kb4niSq1LIw" name="Оформление врзврата средств"/>
+        <entry xmi:type="uml:Activity" xmi:id="_qQzrAI-2Ee6kb4niSq1LIw" name="Выбор билета для возврата"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_00aMoI-2Ee6kb4niSq1LIw" name="Возврат средств">
+        <doActivity xmi:type="uml:Activity" xmi:id="_9KtJMI-2Ee6kb4niSq1LIw" name="Осуществление операции возврата средств на банковский счет"/>
+        <entry xmi:type="uml:Activity" xmi:id="_3ikcAI-2Ee6kb4niSq1LIw" name="Ввод данных банковской карты для возврата средств"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_LRfdsI-3Ee6kb4niSq1LIw" name="Выбор билета для покупки">
+        <doActivity xmi:type="uml:Activity" xmi:id="_TDokUI-3Ee6kb4niSq1LIw" name="Оформление заказа"/>
+        <entry xmi:type="uml:Activity" xmi:id="_MRwA0I-3Ee6kb4niSq1LIw" name="Ввод фильтров для поиска подходящего билета"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_henAII-3Ee6kb4niSq1LIw" name="Операция оплаты">
+        <doActivity xmi:type="uml:Activity" xmi:id="_n5YEII-3Ee6kb4niSq1LIw" name="Осуществление оплаты"/>
+        <entry xmi:type="uml:Activity" xmi:id="_jbgxsI-3Ee6kb4niSq1LIw" name="Ввод данных банковской карты для произведения оплаты"/>
+      </subvertex>
+      <subvertex xmi:type="uml:State" xmi:id="_GmvwYI-4Ee6kb4niSq1LIw" name="Завершение работы платежной системы">
+        <doActivity xmi:type="uml:Activity" xmi:id="_S7RdEI-4Ee6kb4niSq1LIw" name="Отправить отчет об операции оплаты/возврата на почту"/>
+      </subvertex>
+      <subvertex xmi:type="uml:Pseudostate" xmi:id="_v8H9II-4Ee6kb4niSq1LIw" name="" kind="choice"/>
+      <subvertex xmi:type="uml:FinalState" xmi:id="_EEmHQI-5Ee6kb4niSq1LIw" name=""/>
+    </region>
   </packagedElement>
 </uml:Model>
